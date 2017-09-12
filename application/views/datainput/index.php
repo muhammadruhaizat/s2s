@@ -297,13 +297,7 @@ function MM_swapImage() { //v3.0
 																<option value="Informal path 0m to <1.0m:6"> Informal path 0m to <1.0m </option>
 										                  </select></td>
 											              <td width="6">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
+																
 											              
 										                </tr>
 										              </table>
@@ -373,14 +367,7 @@ function MM_swapImage() { //v3.0
 																<option value="Not Applicable:1"> Not Applicable </option>
 												                </select></td>
 													            <td width="132">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																 
 											            </tr>
 											          </table>
 													</div>
@@ -398,14 +385,7 @@ function MM_swapImage() { //v3.0
 																<option value="Poor:1.42"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -449,14 +429,7 @@ function MM_swapImage() { //v3.0
 																<option value="Poor:1.2"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -475,14 +448,7 @@ function MM_swapImage() { //v3.0
 																<option value=">= 10%:1.7"> ≥ 10% </option>
 												                </select></td>
 													            <td width="7">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -501,14 +467,7 @@ function MM_swapImage() { //v3.0
 																<option value="Poor:1.4"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -532,7 +491,7 @@ function MM_swapImage() { //v3.0
 																<td>
 																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																			<img src="<?php echo base_url();?>assets/images/jalan_licin.jpg"/>
 																		</div>
 																	</a>
 																</td>
@@ -554,14 +513,7 @@ function MM_swapImage() { //v3.0
 																<option value="Present:1"> Present </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -583,7 +535,7 @@ function MM_swapImage() { //v3.0
 																<td>
 																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																			<img src="<?php echo base_url();?>assets/images/car_park.jpg"/>
 																		</div>
 																	</a>
 																</td>
@@ -605,14 +557,7 @@ function MM_swapImage() { //v3.0
 																<option value="Present:1"> Present </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -635,7 +580,7 @@ function MM_swapImage() { //v3.0
 																<td>
 																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																			<img src="<?php echo base_url();?>assets/images/papan_kawasan_sek.jpg"/>
 																		</div>
 																	</a>
 																</td>
@@ -660,7 +605,7 @@ function MM_swapImage() { //v3.0
 																<td>
 																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																			<img src="<?php echo base_url();?>assets/images/lampu_jalan.jpg"/>
 																		</div>
 																	</a>
 																</td>
@@ -694,7 +639,7 @@ function MM_swapImage() { //v3.0
 																<td>
 																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																			<img src="<?php echo base_url();?>assets/images/lintasan_jalan_kaki.jpg"/>
 																		</div>
 																	</a>
 																</td>
@@ -716,14 +661,7 @@ function MM_swapImage() { //v3.0
 																<option value="Poor:1.5"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -755,14 +693,7 @@ function MM_swapImage() { //v3.0
 																<option value="Mini roundabout:1.3"> Mini roundabout </option>
 												                </select></td>
 													            <td width="10">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -781,14 +712,7 @@ function MM_swapImage() { //v3.0
 																<option value="Not Applicable:1"> Not Applicable </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -806,14 +730,7 @@ function MM_swapImage() { //v3.0
 																<option value="Present:1"> Present</option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
@@ -826,14 +743,7 @@ function MM_swapImage() { //v3.0
 												      <tr>
 												        <td width="331"><input name="EFI" type="text" id="form-field-1" class="col-sm-12" placeholder="Number of lanes and AADT" /></td>
 												        <td width="7">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
-																		</div>
-																	</a>
-																</td>
-												        
+																
 											        </tr>
 											      </table>
 												</div>
@@ -873,14 +783,7 @@ function MM_swapImage() { //v3.0
 																<option value=">=150km/h:1"> >=150km/h </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-																<td>
-																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<div class="popupTitle">
-																			<img src="<?php echo base_url();?>assets/images/selekoh.jpg"/>
-																		</div>
-																	</a>
-																</td>
-													            
+																
 											            </tr>
 											          </table>
 													</div>
