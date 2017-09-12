@@ -1,96 +1,63 @@
 	<?php header('Access-Control-Allow-Origin: *'); ?>
 	<?php $this->load->view('header'); ?>
 		<div class="main-container ace-save-state" id="main-container">
+		<script src="<?php echo base_url();?>assets/js/jquery.dataTables.min.js"></script>
+		<script src="<?php echo base_url();?>assets/js/jquery.dataTables.bootstrap.min.js"></script>
+
 			<script type="text/javascript">
-			function CariBas(){
-				//$.get("http://www.data.gov.my/data/api/action/datastore_search?resource_id=e3ef42d7-8e97-4718-a386-bb6199a4e033", function(data, status){
-				//	alert("Data: " + data + "\nStatus: " + status);
-				//});
-				//var data = {
-				//	resource_id: 'e3ef42d7-8e97-4718-a386-bb6199a4e033',
-				//	limit: 5
-				//};
-				//$.ajax({
-				//	//url: 'http://www.data.gov.my/data/api/action/datastore_search',
-				//	url: 'https://mhroads.llm.gov.my/api/get_users',
-				//	type: 'POST',
-				//	//data: data,
-				//	crossDomain: true,
-				//	dataType: 'jsonp',
-				//	async:true,
-				//	complete: function(data) {
-				//		alert('Total results found: ' + data.data);
-				//	}
-				//});
+			$( document ).ready(function() {
+				var myTable = $('#dynamic-table').DataTable();
 				
-				var xhr = createCORSRequest('GET', 'https://mhroads.llm.gov.my/api/get_users');
-				if (!xhr) {
-				  throw new Error('CORS not supported');
-				}
+				$('.selBandarSurat').change( function() {
+					var selBandarSurat = this.value;
+					
+					if($(".selBandarSurat option:selected").text() != "--Sila pilih bandar surat--"){
+						myTable
+							.column(4)
+							.search(selBandarSurat)
+							.draw();
+					}else{
+						myTable
+							.column(4)
+							.search("")
+							.draw();
+					}
+						
+					if($(".selNegeri option:selected").text() != "--Sila pilih negeri--"){
+						var selNegeri = $(".selNegeri option:selected").text();
+						
+						myTable
+							.column(5)
+							.search(selNegeri)
+							.draw();						
+					}
+				});
 				
-				  xhr.onload = function() {
-					var text = xhr.responseText;
-					var title = getTitle(text);
-					alert('Response from CORS request to ' + url + ': ' + title);
-				  };
+				$('.selNegeri').change( function() {
+					var selNegeri = this.value;
+					
+					if($(".selNegeri option:selected").text() != "--Sila pilih negeri--"){
+						myTable
+							.column(5)
+							.search(selNegeri)
+							.draw();						
+					}else{
+						myTable
+							.column(5)
+							.search("")
+							.draw();						
+					}
 
-				  xhr.onerror = function(error) {
-					alert('Woops, there was an error making the request.'+error);
-				  };
-
-				  xhr.send();
-				
-				function createCORSRequest(method, url) {
-				  var xhr = new XMLHttpRequest();
-				  if ("withCredentials" in xhr) {
-
-					// Check if the XMLHttpRequest object has a "withCredentials" property.
-					// "withCredentials" only exists on XMLHTTPRequest2 objects.
-					xhr.open(method, url, true);
-
-				  } else if (typeof XDomainRequest != "undefined") {
-
-					// Otherwise, check if XDomainRequest.
-					// XDomainRequest only exists in IE, and is IE's way of making CORS requests.
-					xhr = new XDomainRequest();
-					xhr.open(method, url);
-
-				  } else {
-
-					// Otherwise, CORS is not supported by the browser.
-					xhr = null;
-
-				  }
-				  return xhr;
-				}
-				
-				//$.ajax({
-				//	url: 'http://www.data.gov.my/data/api/action/datastore_search?resource_id=e3ef42d7-8e97-4718-a386-bb6199a4e033',
-				//	type: 'post',
-				//	//data: data,
-				//	dataType: 'json',
-				//	timeout: 5000,
-				//	success: function (res){
-				//		if (!res){
-				//			try {
-				//				timeout();
-				//			} catch (e){
-				//				// do nothing
-				//			}						
-				//		} else {
-				//			alert(res);
-				//			//success(res);
-				//		}
-				//	},
-				//	error: function (res){
-				//		try {
-				//			timeout();
-				//		} catch (e){
-				//			// do nothing
-				//		}
-				//	}
-				//});
-			}
+					if($(".selBandarSurat option:selected").text() != "--Sila pilih bandar surat--"){
+						var selBandarSurat = $(".selBandarSurat option:selected").text();
+						
+						myTable
+							.column(4)
+							.search(selBandarSurat)
+							.draw();						
+					}
+				});
+			});
 			</script>
 			<div class="main-content">
 				<div class="main-content-inner">
@@ -100,33 +67,52 @@
 								<i class="ace-icon fa fa-home home-icon"></i>
 								<a href="#">Utama</a>
 							</li>
-							<li class="active">Carian Pengendali Bas Sekolah</li>
+							<li class="active">Carian Sekolah</li>
 						</ul><!-- /.breadcrumb -->
 					</div>
 
 					<div class="page-content">
 						<div class="page-header">
 							<h1>
-								Carian Pengendali Bas Sekolah
+								Carian Sekolah
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
 									cari
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
-						<select>
-							<option>--Sila pilih daerah--</option>
-							<?php foreach($senarai_daerah as $eachDaerah):?>
-							<option><?php echo $eachDaerah->BandarSurat;?></option>
-							<?php endforeach;?>
-						</select>
-						<input type="button" value="Cari" id="iCari" onclick="CariBas();"/>
+						<table>
+							<tr>
+								<td>Bandar Surat</td>
+								<td>&nbsp;:</td>
+								<td style="padding:5px;">
+									<select class="selBandarSurat">
+										<option>--Sila pilih bandar surat--</option>
+										<?php foreach($senarai_bandar_surat as $eachBandarSurat):?>
+										<option><?php echo $eachBandarSurat->BandarSurat;?></option>
+										<?php endforeach;?>
+									</select>								
+								</td>
+							</tr>
+							<tr>
+								<td>Negeri</td>
+								<td>&nbsp;:</td>
+								<td style="padding:5px;">
+									<select class="selNegeri">
+										<option>--Sila pilih negeri--</option>
+										<?php foreach($senarai_negeri as $eachNegeri):?>
+										<option><?php echo $eachNegeri->Negeri;?></option>
+										<?php endforeach;?>
+									</select>								
+								</td>
+							</tr>
+						</table>
 						<br/>
 						<br/>
 						<br/>
 						
 										<div class="table-header">
-											Senarai Pengendali Bas Sekolah
+											Senarai Sekolah
 										</div>
 
 										<!-- div.table-responsive -->
@@ -136,96 +122,28 @@
 											<table id="dynamic-table" class="table table-striped table-bordered table-hover">
 												<thead>
 													<tr>
-														<th class="center">
-															<label class="pos-rel">
-																<input type="checkbox" class="ace" />
-																<span class="lbl"></span>
-															</label>
-														</th>
-														<th>Domain</th>
-														<th>Price</th>
-														<th class="hidden-480">Clicks</th>
-
-														<th>
-															<i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
-															Update
-														</th>
-														<th class="hidden-480">Status</th>
-
-														<th></th>
+														<th class="center">#</th>
+														<th>Kod Sekolah</th>
+														<th>Nama Sekolah</th>
+														<th>Alamat</th>
+														<th>Bandar Surat</th>
+														<th>Negeri</th>
+														<th>Penarafan</th>
 													</tr>
 												</thead>
 
 												<tbody>
+													<?php $i=0; foreach($senarai_sekolah as $eachSekolah): $i++;?>
 													<tr>
-														<td class="center">
-															<label class="pos-rel">
-																<input type="checkbox" class="ace" />
-																<span class="lbl"></span>
-															</label>
-														</td>
-
-														<td>
-															<a href="#">app.com</a>
-														</td>
-														<td>$45</td>
-														<td class="hidden-480">3,330</td>
-														<td>Feb 12</td>
-
-														<td class="hidden-480">
-															<span class="label label-sm label-warning">Expiring</span>
-														</td>
-
-														<td>
-															<div class="hidden-sm hidden-xs action-buttons">
-																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
-																</a>
-
-																<a class="green" href="#">
-																	<i class="ace-icon fa fa-pencil bigger-130"></i>
-																</a>
-
-																<a class="red" href="#">
-																	<i class="ace-icon fa fa-trash-o bigger-130"></i>
-																</a>
-															</div>
-
-															<div class="hidden-md hidden-lg">
-																<div class="inline pos-rel">
-																	<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">
-																		<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
-																	</button>
-
-																	<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
-																		<li>
-																			<a href="#" class="tooltip-info" data-rel="tooltip" title="View">
-																				<span class="blue">
-																					<i class="ace-icon fa fa-search-plus bigger-120"></i>
-																				</span>
-																			</a>
-																		</li>
-
-																		<li>
-																			<a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
-																				<span class="green">
-																					<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
-																				</span>
-																			</a>
-																		</li>
-
-																		<li>
-																			<a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
-																				<span class="red">
-																					<i class="ace-icon fa fa-trash-o bigger-120"></i>
-																				</span>
-																			</a>
-																		</li>
-																	</ul>
-																</div>
-															</div>
-														</td>
+														<td class="center"><?php echo $i;?></td>
+														<td><?php echo $eachSekolah->KodSekolah;?></td>
+														<td><?php echo $eachSekolah->NamaSekolah;?></td>
+														<td><?php echo $eachSekolah->AlamatSurat;?></td>
+														<td><?php echo $eachSekolah->BandarSurat;?></td>
+														<td><?php echo $eachSekolah->Negeri;?></td>
+														<td class="center"><?php if(isset($eachSekolah->star_rate)):?><span><?php if($eachSekolah->star_rate == 1): echo "<img style='width:80px;' src='".base_url()."assets/images/1-star.png'/>"; elseif($eachSekolah->star_rate == 2): echo "<img style='width:80px;' src='".base_url()."assets/images/2-star.png'/>";elseif($eachSekolah->star_rate == 3): echo "<img style='width:80px;' src='".base_url()."assets/images/3-star.png'/>";elseif($eachSekolah->star_rate == 4): echo "<img style='width:80px;' src='".base_url()."assets/images/4-star.png'/>";elseif($eachSekolah->star_rate == 5): echo "<img style='width:80px;' src='".base_url()."assets/images/5-star.png'/>";endif;?></span> (<?php echo $eachSekolah->star_rate;?>/5)<?php else:?><strong>-</strong><?php endif;?></td>
 													</tr>
+													<?php endforeach;?>
 												</tbody>
 											</table>
 										</div>

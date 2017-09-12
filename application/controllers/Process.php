@@ -37,6 +37,8 @@ class Process extends CI_Controller {
 		ini_set('MAX_EXECUTION_TIME', -1);
 
 
+            $SchoolID = $this->input->post('schoolID');
+			
             $NOL  = $this->input->post('NOL');
                 $NOL = explode(':', $NOL);
             $MT  = $this->input->post('MT');
@@ -164,7 +166,7 @@ class Process extends CI_Controller {
             'AV_Walk' => $AV_Walk,
             'SR' => $SR,
             'star_rate' => $star_rate,
-
+            'IDSchool' => $SchoolID
         );
         ////Insert into assessment table for values
         $this->db->insert('assessment', $upload_data);
@@ -204,15 +206,15 @@ class Process extends CI_Controller {
             'AV_Walk' => $AV_Walk,
             'SR' => $SR,
             'star_rate' => $star_rate,
-
+            'IDSchool' => $SchoolID
         );
         ////Insert into assessment table for text
         $this->db->insert('assessment_text', $upload_data_text);
 
-
+		$data["KodSekolah"] = $SchoolID;
         //Alert success redirect to ?success
 		//redirect("main");
-		$this->load->view("displaystar");
+		$this->load->view("displaystar",$data);
 
     }
         

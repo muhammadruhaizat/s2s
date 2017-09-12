@@ -37,7 +37,7 @@
 
 		<?php
 
-			$query 	= $this->db->query("SELECT * FROM `senarai_sekolah` LIMIT 1");
+			$query 	= $this->db->query("SELECT * FROM `senarai_sekolah` WHERE KodSekolah = '".$KodSekolah."'");
 			foreach ($query->result_array() as $row)
 				{
 					$nama = $row['NamaSekolah'];
@@ -156,10 +156,10 @@
 
 						</div>
 						
-						<div id="dmapx" class="fade">
+						<div id="dmapx" class="tab-pane fade">
 
 						<?php
-							$query = $this->db->query("SELECT * FROM `assessment_text` LIMIT 1");
+							$query = $this->db->query("SELECT * FROM `assessment_text` WHERE IDSchool = '".$KodSekolah."'");
 
 							$row = $query->row();
 
@@ -308,13 +308,13 @@
 
 						</div>
 							
-						<div id="dmapoverall" class="fade">
+						<div id="dmapoverall" class="tab-pane fade">
 
 						<?php
 
 							$improve = array();
 
-							$query = $this->db->query("SELECT * FROM `assessment` LIMIT 1");
+							$query = $this->db->query("SELECT * FROM `assessment` WHERE IDSchool = '".$KodSekolah."'");
 
 							$row = $query->row();
 

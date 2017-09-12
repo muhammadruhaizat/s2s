@@ -26,8 +26,16 @@ class CarianBas extends CI_Controller {
     }
 	public function index()
 	{
+		$query = $this->db->query('SELECT * FROM senarai_sekolah LEFT JOIN assessment ON senarai_sekolah.KodSekolah = assessment.IDSchool');
+		$data['senarai_sekolah'] = $query->result();
+		
+		
 		$query = $this->db->query('SELECT BandarSurat FROM senarai_sekolah GROUP BY BandarSurat');
-		$data['senarai_daerah'] = $query->result();
+		$data['senarai_bandar_surat'] = $query->result();
+		
+		$query = $this->db->query('SELECT Negeri FROM senarai_sekolah GROUP BY Negeri');
+		$data['senarai_negeri'] = $query->result();
+		
 		$this->load->view('carianbas',$data);
 	}
 	
