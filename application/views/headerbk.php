@@ -61,8 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="navbar-buttons navbar-header pull-left">
 				  <table width=100% border="0" align="center">
 				    <tr>
-				      <td align="left" valign="middle"><p>&nbsp;</p>
-				        <ul class="nav ace-nav">
+				      <td align="left" valign="middle"><ul class="nav ace-nav">
 				        <li class="purple"><a href="<?php echo base_url();?>dashboard"><span class="badge badge-grey">Dashboard</span> </a> </li>
 				        <li class="lightblue"> <a href="<?php echo base_url();?>schoolist"> <i class="ace-icon fa fa-tasks"></i> <span class="badge badge-grey">School List</span> </a> </li>
 				        <li class="red"> <a href="<?php echo base_url();?>datainput"> <i class="ace-icon fa fa-exchange"></i> <span class="badge badge-grey">Data Input</span> </a> </li>
