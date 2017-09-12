@@ -54,89 +54,119 @@
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Number of lanes </label>
 												<div class="col-sm-5">
 													<div class="input-group col-sm-12">
-															<select name="NOL" class="form-control" value="<?php echo set_value('NOL'); ?>">
-																<option value=""> --Please Select-- </option>
-																<option value="1"> One </option>
-																<option value="2.8"> Two </option>
-																<option value="5.2"> Three </option>
-																<option value="8"> Four or more </option>
-																<option value="1.8"> Two and one </option>
-																<option value="4"> Three and two </option>
-															</select>
-											          <img src="<?php echo base_url();?>assets/images/tooltip.ico" alt="" /></div>
+													  <table width="200" border="0">
+										              <tr>
+										                <td><select name="NOL" class="form-control" value="<?php echo set_value('NOL'); ?>">
+										                  <option value=""> --Please Select-- </option>
+										                  <option value="1"> One </option>
+										                  <option value="2.8"> Two </option>
+										                  <option value="5.2"> Three </option>
+										                  <option value="8"> Four or more </option>
+										                  <option value="1.8"> Two and one </option>
+										                  <option value="4"> Three and two </option>
+									                    </select></td>
+										                <td>&nbsp;</td>
+										                <td><img src="../s2s/assets/images/tooltip.ico" alt="" width="20" height="20" /></td>
+									                  </tr>
+										              </table>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Median Type </label>
 												<div class="col-sm-5">
 													<div class="input-group col-sm-12">
-															<select name="MT" class="form-control">
-																<option value=""> --Please Select-- </option>
-																<option value="1"> Safety barrier - metal </option>
-																<option value="1"> Safety barrier - concrete </option>
-																<option value="1"> Physical median width >=20m </option>
-																<option value="1"> Physical median width 10 to <20m </option>
-																<option value="1"> Physical median width 5 to <10m </option>
-																<option value="1"> Physical median width 1 to <5m </option>
-																<option value="1.6"> Physical median width 0 to <1m </option>
-																<option value="3"> Continuous central turning lane </option>
-																<option value="2.7"> Flexible posts </option>
-																<option value="2.4"> Central hatching (>1m) </option>
-																<option value="3"> Centre line </option>
-																<option value="1"> Safety barrier - motorcycle friendly </option>
-																<option value="1"> One way </option>
-																<option value="2.7"> Wide centre line (0.3m to 1m) </option>
-																<option value="1"> Safety barrier - wire rope </option>
-															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													  <table width="406" border="0">
+													    <tr>
+															    <td width="370"><select name="MT" class="form-control">
+															      <option value=""> --Please Select-- </option>
+															      <option value="1"> Safety barrier - metal </option>
+															      <option value="1"> Safety barrier - concrete </option>
+															      <option value="1"> Physical median width >=20m </option>
+															      <option value="1"> Physical median width 10 to <20m </option>
+															      <option value="1"> Physical median width 5 to <10m </option>
+															      <option value="1"> Physical median width 1 to <5m </option>
+															      <option value="1.6"> Physical median width 0 to <1m </option>
+															      <option value="3"> Continuous central turning lane </option>
+															      <option value="2.7"> Flexible posts </option>
+															      <option value="2.4"> Central hatching (>1m) </option>
+															      <option value="3"> Centre line </option>
+															      <option value="1"> Safety barrier - motorcycle friendly </option>
+															      <option value="1"> One way </option>
+															      <option value="2.7"> Wide centre line (0.3m to 1m) </option>
+															      <option value="1"> Safety barrier - wire rope </option>
+														        </select></td>
+															    <td width="10">&nbsp;</td>
+															    <td width="64"><img src="../s2s/assets/images/tooltip.ico" alt="" width="20" height="20" /></td>
+														      </tr>
+													  </table>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Sidewalk - Driver Side </label>
 												<div class="col-sm-5">
 													<div class="input-group col-sm-12">
-															<select name="SWDS" class="form-control">
-																<option value=""> --Please Select-- </option>
-																<option value="0"> Physical Barrier </option>
-																<option value="0.075"> Non-physical separation ≥ 3.0m </option>
-																<option value="0.09"> Non-physical separation 1.0m to <3.0m </option>
-																<option value="0.1"> Non-physical separation 0m to <1.0m </option>
-																<option value="20"> None </option>
-																<option value="5"> Informal path ≥ 1.0m </option>
-																<option value="6"> Informal path 0m to <1.0m </option>
-															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													  <table width="200" border="0">
+											            <tr>
+											              <td><select name="SWDS" class="form-control">
+											                <option value=""> --Please Select-- </option>
+											                <option value="0"> Physical Barrier </option>
+											                <option value="0.075"> Non-physical separation ≥ 3.0m </option>
+											                <option value="0.09"> Non-physical separation 1.0m to <3.0m </option>
+											                <option value="0.1"> Non-physical separation 0m to <1.0m </option>
+											                <option value="20"> None </option>
+											                <option value="5"> Informal path ≥ 1.0m </option>
+											                <option value="6"> Informal path 0m to <1.0m </option>
+										                  </select></td>
+											              <td>&nbsp;</td>
+											              <td><img src="../s2s/assets/images/tooltip.ico" alt="" width="20" height="20" /></td>
+										                </tr>
+										              </table>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Sidewalk - Passenger Side </label>
 												<div class="col-sm-5">
 													<div class="input-group col-sm-12">
-															<select name="SWPS" class="form-control">
-																<option value=""> --Please Select-- </option>
-																<option value="0"> Physical Barrier </option>
-																<option value="0.075"> Non-physical separation ≥ 3.0m </option>
-																<option value="0.09"> Non-physical separation 1.0m to <3.0m </option>
-																<option value="0.1"> Non-physical separation 0m to <1.0m </option>
-																<option value="20"> None </option>
-																<option value="5"> Informal path ≥ 1.0m </option>
-																<option value="6"> Informal path 0m to <1.0m </option>
-															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													  <table width="200" border="0">
+											            <tr>
+											              <td><select name="SWPS" class="form-control">
+											                <option value=""> --Please Select-- </option>
+											                <option value="0"> Physical Barrier </option>
+											                <option value="0.075"> Non-physical separation ≥ 3.0m </option>
+											                <option value="0.09"> Non-physical separation 1.0m to <3.0m </option>
+											                <option value="0.1"> Non-physical separation 0m to <1.0m </option>
+											                <option value="20"> None </option>
+											                <option value="5"> Informal path ≥ 1.0m </option>
+											                <option value="6"> Informal path 0m to <1.0m </option>
+										                  </select></td>
+											              <td>&nbsp;</td>
+											              <td><img src="../s2s/assets/images/tooltip.ico" alt="" width="20" height="20" /></td>
+										                </tr>
+										              </table>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Curvature </label>
 												<div class="col-sm-5">
 													<div class="input-group col-sm-12">
-															<select name="Curvature" class="form-control">
-																<option value=""> --Please Select-- </option>
-																<option value="1"> Straight or gently curving </option>
-																<option value="1.8"> Moderate </option>
-																<option value="3.5"> Sharp </option>
-																<option value="6"> Very Sharp </option>
-															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													  <table width="200" border="0">
+											            <tr>
+											              <td><select name="Curvature" class="form-control">
+											                <option value=""> --Please Select-- </option>
+											                <option value="1"> Straight or gently curving </option>
+											                <option value="1.8"> Moderate </option>
+											                <option value="3.5"> Sharp </option>
+											                <option value="6"> Very Sharp </option>
+										                  </select></td>
+											              <td>&nbsp;</td>
+											              <td><img src="../s2s/assets/images/tooltip.ico" alt="" width="20" height="20" /></td>
+										                </tr>
+										              </table>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -149,7 +179,7 @@
 																<option value="1.25"> Poor </option>
 																<option value="1"> Not Applicable </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -161,7 +191,7 @@
 																<option value="1"> Adequate </option>
 																<option value="1.42"> Poor </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -173,8 +203,8 @@
 																<option value="1"> Wide (≥ 3.25m) </option>
 																<option value="1.2"> Medium (≥ 2.75m to < 3.25m) </option>
 																<option value="1.5"> Narrow (≥ 0m to < 2.75m) </option>
-															</select> 
-													<img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" />													</div>
+															</select>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -186,7 +216,7 @@
 																<option value="1"> Adequate </option>
 																<option value="1.2"> Poor </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -199,7 +229,7 @@
 																<option value="1.2"> ≥ 7.5% to <10% </option>
 																<option value="1.7"> ≥ 10% </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -212,7 +242,7 @@
 																<option value="1.2"> Medium </option>
 																<option value="1.4"> Poor </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -227,7 +257,7 @@
 																<option value="3"> Unsealed - adequate </option>
 																<option value="5.5"> Unsealed - poor </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -239,7 +269,7 @@
 																<option value="1.25"> Not present </option>
 																<option value="1"> Present </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -252,7 +282,7 @@
 																<option value="1.2"> One side </option>
 																<option value="1"> None </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -264,7 +294,7 @@
 																<option value="1.25"> Not present </option>
 																<option value="1"> Present </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -278,7 +308,7 @@
 																<option value="1"> No school zone warning </option>
 																<option value="1"> Not applicable (no school at the location) </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -290,7 +320,7 @@
 																<option value="1.25"> Not present </option>
 																<option value="1"> Present </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -311,7 +341,7 @@
 																<option value="3.4"> Raised unmarked crossing with refuge </option>
 																<option value="4.5"> Raised unmarked crossing without refuge </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -323,7 +353,7 @@
 																<option value="1"> Adequate </option>
 																<option value="1.5"> Poor </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -349,7 +379,7 @@
 																<option value="1.1"> Median crossing point - formal </option>
 																<option value="1.3"> Mini roundabout </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -362,7 +392,7 @@
 																<option value="1.2"> Poor </option>
 																<option value="1"> Not Applicable </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -374,7 +404,7 @@
 																<option value="1.25"> Not present </option>
 																<option value="1"> Present</option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -415,7 +445,7 @@
 																<option value="0.96"> 145km/h </option>
 																<option value="1"> >=150km/h </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+													</div>
 												</div>
 											</div>
 											<div class="form-group">
