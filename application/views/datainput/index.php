@@ -86,20 +86,20 @@
 	div.popupTitle{
 		display: none;
 		font-family: Arial, Helvetica, sans-serif;
-		border:1px solid grey;
 		background-color:white;
 		width:auto;
-		left:50px;
+		left:20px;
 		text-align:left;
 		color:black;
 		padding:5px;
 		border-radius:5px;
+		z-index:3;
+		position: absolute;
 	}
-	.fa-info-circle:hover div.popupTitle{
+	.aPop:hover div.popupTitle{
 		display: block;
 		position: absolute;
 		font-family: Arial, Helvetica, sans-serif;
-		border:1px solid grey;
 		background-color:white;
 		width:auto;
 		right:50px;
@@ -179,12 +179,6 @@ function MM_swapImage() { //v3.0
 										</button>
 									</div>
 
-									<i class="fa fa-info-circle" style="color:red;">
-										<div class="popupTitle">
-											<img src="<?php echo base_url();?>assets/images/Info.png"/>
-										</div>
-									</i>
-
 									<div class="widget-body" style="display:none;">
 										<div class="widget-main no-padding">
 											<form class="form-horizontal" role="form" method="post" action="process/processdata" enctype="multipart/form-data">
@@ -236,16 +230,16 @@ function MM_swapImage() { //v3.0
 															<option value="Three and two:4"> Three and two </option>
 									                    </select></td>
 										                <td width="6">&nbsp;</td>
-										                <td width="17">
-														
-									<a href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');">
-										<div class="popupTitle">
-											<img src="<?php echo base_url();?>assets/images/lanes_number.gif"/>
-										</div>
-									</a>
-									
+										                <td>
+															<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																<div class="popupTitle">
+																	<img src="<?php echo base_url();?>assets/images/lanes_number.gif"/>
+																</div>
+															</a>
+														</td>
 														</tr>
 									                </table>
+												</div>
 												</div>
 											</div>
 											<div class="form-group">
@@ -273,7 +267,14 @@ function MM_swapImage() { //v3.0
 																<option value="Safety barrier - wire rope:1"> Safety barrier - wire rope </option>
 														        </select></td>
 															    <td width="10">&nbsp;</td>
-															    <td width="64"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image26','','../s2s/assets/images/pembahagi_jalan.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image26" id="Image" /></a><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image26','','../s2s/assets/images/Info.png',1)"></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+															    
 												      </tr>
 												    </table>
 													</div>
@@ -296,7 +297,14 @@ function MM_swapImage() { //v3.0
 																<option value="Informal path 0m to <1.0m:6"> Informal path 0m to <1.0m </option>
 										                  </select></td>
 											              <td width="6">&nbsp;</td>
-											              <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image27','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image27" height="20" id="Image27" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+											              
 										                </tr>
 										              </table>
 													</div>
@@ -339,7 +347,14 @@ function MM_swapImage() { //v3.0
 																<option value="Very Sharp:6"> Very Sharp </option>
 										                  </select></td>
 											              <td width="6">&nbsp;</td>
-											              <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','../s2s/assets/images/selekoh.jpg',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image28" id="Image28" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/selekoh.jpg"/>
+																		</div>
+																	</a>
+																</td>
+											              
 										                </tr>
 										              </table>
 													</div>
@@ -358,7 +373,14 @@ function MM_swapImage() { //v3.0
 																<option value="Not Applicable:1"> Not Applicable </option>
 												                </select></td>
 													            <td width="132">&nbsp;</td>
-													            <td width="54"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image30','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image23" height="20" id="Image30" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -376,7 +398,14 @@ function MM_swapImage() { //v3.0
 																<option value="Poor:1.42"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image24" height="20" id="Image24" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -395,7 +424,14 @@ function MM_swapImage() { //v3.0
 																<option value="Narrow (>= 0m to < 2.75m):1.5"> Narrow (≥ 0m to < 2.75m) </option>
 												                </select></td>
 													            <td width="5">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image210','','../s2s/assets/images/lebar_jalan.jpg',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image210" id="Image210" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/lebar_jalan.jpg"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -413,7 +449,14 @@ function MM_swapImage() { //v3.0
 																<option value="Poor:1.2"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image211','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image211" height="20" id="Image211" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -432,7 +475,14 @@ function MM_swapImage() { //v3.0
 																<option value=">= 10%:1.7"> ≥ 10% </option>
 												                </select></td>
 													            <td width="7">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image212','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image212" height="20" id="Image212" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -451,7 +501,14 @@ function MM_swapImage() { //v3.0
 																<option value="Poor:1.4"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image213','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image213" height="20" id="Image213" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -472,7 +529,14 @@ function MM_swapImage() { //v3.0
 																<option value="Unsealed - poor:5.5"> Unsealed - poor </option>
 												                </select></td>
 													            <td width="7">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image214','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image214" height="20" id="Image214" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -490,7 +554,14 @@ function MM_swapImage() { //v3.0
 																<option value="Present:1"> Present </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image215','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image215" height="20" id="Image215" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -509,7 +580,14 @@ function MM_swapImage() { //v3.0
 																<option value="None:1"> None </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image216','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image216" height="20" id="Image216" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -527,7 +605,14 @@ function MM_swapImage() { //v3.0
 																<option value="Present:1"> Present </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image217','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image217" height="20" id="Image217" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -547,7 +632,14 @@ function MM_swapImage() { //v3.0
 																<option value="Not applicable (no school at the location):1"> Not applicable (no school at the location) </option>
 												                </select></td>
 													            <td width="10">&nbsp;</td>
-													            <td width="64"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image218','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image218" height="20" id="Image218" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -565,7 +657,14 @@ function MM_swapImage() { //v3.0
 																<option value="Present:1"> Present </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image219','','../s2s/assets/images/lampu_jalan.jpg',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image219" id="Image219" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -592,7 +691,14 @@ function MM_swapImage() { //v3.0
 																<option value="Raised unmarked crossing without refuge:4.5"> Raised unmarked crossing without refuge </option>
 												                </select></td>
 													            <td width="10">&nbsp;</td>
-													            <td width="64"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image220','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image220" height="20" id="Image220" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -610,7 +716,14 @@ function MM_swapImage() { //v3.0
 																<option value="Poor:1.5"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image221','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image221" height="20" id="Image221" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -642,7 +755,14 @@ function MM_swapImage() { //v3.0
 																<option value="Mini roundabout:1.3"> Mini roundabout </option>
 												                </select></td>
 													            <td width="10">&nbsp;</td>
-													            <td width="64"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image222','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image222" height="20" id="Image222" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -661,7 +781,14 @@ function MM_swapImage() { //v3.0
 																<option value="Not Applicable:1"> Not Applicable </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image223','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image223" height="20" id="Image223" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -679,7 +806,14 @@ function MM_swapImage() { //v3.0
 																<option value="Present:1"> Present</option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image224','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image224" height="20" id="Image224" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
@@ -692,7 +826,14 @@ function MM_swapImage() { //v3.0
 												      <tr>
 												        <td width="331"><input name="EFI" type="text" id="form-field-1" class="col-sm-12" placeholder="Number of lanes and AADT" /></td>
 												        <td width="7">&nbsp;</td>
-												        <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image225','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image225" height="20" id="Image225" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/pembahagi_jalan.png"/>
+																		</div>
+																	</a>
+																</td>
+												        
 											        </tr>
 											      </table>
 												</div>
@@ -732,7 +873,14 @@ function MM_swapImage() { //v3.0
 																<option value=">=150km/h:1"> >=150km/h </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
-													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image226','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image226" height="20" id="Image226" /></a></td>
+																<td>
+																	<a class="aPop" href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');background-size: 15px 16px;position:relative;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																		<div class="popupTitle">
+																			<img src="<?php echo base_url();?>assets/images/selekoh.jpg"/>
+																		</div>
+																	</a>
+																</td>
+													            
 											            </tr>
 											          </table>
 													</div>
