@@ -72,11 +72,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $active_group = 'default';
 $query_builder = TRUE;
-$hostIP = '172.16.0.201';
-(string)$hostname = gethostbyaddr($hostIP);
+//$hostIP = '172.16.0.201';
+//(string)$hostname = gethostbyaddr($hostIP);
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $hostname,
+	'hostname' => '172.16.0.201',
 	'username' => 's2s',
 	'password' => 'roshack',
 	'database' => 's2s',
