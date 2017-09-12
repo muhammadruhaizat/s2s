@@ -25,6 +25,7 @@ class Main extends CI_Controller {
     }
 	public function index()
 	{
+		ini_set('memory_limit', '-1');
 		$query = $this->db->query('SELECT * FROM senarai_sekolah LEFT JOIN assessment ON senarai_sekolah.KodSekolah = assessment.IDSchool WHERE senarai_sekolah.Latitude != "0"');
 		$data['senarai_sekolah'] = $query->result();
 		$this->load->view('main',$data);

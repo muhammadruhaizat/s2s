@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class CarianBas extends CI_Controller {
+class Carian extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -36,7 +36,7 @@ class CarianBas extends CI_Controller {
 		$query = $this->db->query('SELECT Negeri FROM senarai_sekolah GROUP BY Negeri');
 		$data['senarai_negeri'] = $query->result();
 		
-		$this->load->view('carianbas',$data);
+		$this->load->view('carian',$data);
 	}
 	
 	public function ajax(){
