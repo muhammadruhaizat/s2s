@@ -62,7 +62,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				  <table width=100% border="0" align="center">
 				    <tr>
 				      <td align="left" valign="middle"><ul class="nav ace-nav">
-				        <li class="purple"><a href="<?php echo base_url();?>main"><span class="badge badge-grey">Dashboard</span> </a> </li>
+				        <li class="purple"><a href="<?php echo base_url();?>dashboard"><span class="badge badge-grey">Dashboard</span> </a> </li>
 				        <li class="lightblue"> <a href="<?php echo base_url();?>schoolist"> <i class="ace-icon fa fa-tasks"></i> <span class="badge badge-grey">School List</span> </a> </li>
 				        <li class="red"> <a href="<?php echo base_url();?>datainput"> <i class="ace-icon fa fa-exchange"></i> <span class="badge badge-grey">Data Input</span> </a> </li>
 				        <li class="lightblue"> <a href="<?php echo base_url();?>analysis"> <i class="ace-icon fa fa-globe"></i> <span class="badge badge-grey">Analysis</span> </a> </li>
