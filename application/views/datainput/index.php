@@ -228,12 +228,12 @@ function MM_swapImage() { //v3.0
 										              <tr>
 										                <td width="206"><select name="NOL" class="form-control" value="<?php echo set_value('NOL'); ?>">
 										                  <option value=""> --Please Select-- </option>
-										                  <option value="1"> One </option>
-										                  <option value="2.8"> Two </option>
-										                  <option value="5.2"> Three </option>
-										                  <option value="8"> Four or more </option>
-										                  <option value="1.8"> Two and one </option>
-										                  <option value="4"> Three and two </option>
+															<option value="One:1"> One </option>
+															<option value="Two:2.8"> Two </option>
+															<option value="Three:5.2"> Three </option>
+															<option value="Four or more:8"> Four or more </option>
+															<option value="Two and one:1.8"> Two and one </option>
+															<option value="Three and two:4"> Three and two </option>
 									                    </select></td>
 										                <td width="6">&nbsp;</td>
 										                <td width="17">
@@ -256,21 +256,21 @@ function MM_swapImage() { //v3.0
 													    <tr>
 															    <td width="370"><select name="MT" class="form-control">
 															      <option value=""> --Please Select-- </option>
-															      <option value="1"> Safety barrier - metal </option>
-															      <option value="1"> Safety barrier - concrete </option>
-															      <option value="1"> Physical median width >=20m </option>
-															      <option value="1"> Physical median width 10 to <20m </option>
-															      <option value="1"> Physical median width 5 to <10m </option>
-															      <option value="1"> Physical median width 1 to <5m </option>
-															      <option value="1.6"> Physical median width 0 to <1m </option>
-															      <option value="3"> Continuous central turning lane </option>
-															      <option value="2.7"> Flexible posts </option>
-															      <option value="2.4"> Central hatching (>1m) </option>
-															      <option value="3"> Centre line </option>
-															      <option value="1"> Safety barrier - motorcycle friendly </option>
-															      <option value="1"> One way </option>
-															      <option value="2.7"> Wide centre line (0.3m to 1m) </option>
-															      <option value="1"> Safety barrier - wire rope </option>
+																<option value="Safety barrier - metal:1"> Safety barrier - metal </option>
+																<option value="Safety barrier - concrete:1"> Safety barrier - concrete </option>
+																<option value="Physical median width >=20m:1"> Physical median width >=20m </option>
+																<option value="Physical median width 10 to <20m:1"> Physical median width 10 to <20m </option>
+																<option value="Physical median width 5 to <10m:1"> Physical median width 5 to <10m </option>
+																<option value="Physical median width 1 to <5m:1"> Physical median width 1 to <5m </option>
+																<option value="Physical median width 0 to <1m:1.6"> Physical median width 0 to <1m </option>
+																<option value="Continuous central turning lane:3"> Continuous central turning lane </option>
+																<option value="Flexible posts:2.7"> Flexible posts </option>
+																<option value="Central hatching:2.4"> Central hatching (>1m) </option>
+																<option value="Centre line:3"> Centre line </option>
+																<option value="Safety barrier - motorcycle friendly:1"> Safety barrier - motorcycle friendly </option>
+																<option value="One way:1"> One way </option>
+																<option value="Wide centre line (0.3m to 1m):2.7"> Wide centre line (0.3m to 1m) </option>
+																<option value="Safety barrier - wire rope:1"> Safety barrier - wire rope </option>
 														        </select></td>
 															    <td width="10">&nbsp;</td>
 															    <td width="64"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image26','','../s2s/assets/images/pembahagi_jalan.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image26" id="Image" /></a><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image26','','../s2s/assets/images/Info.png',1)"></a></td>
@@ -286,14 +286,14 @@ function MM_swapImage() { //v3.0
 													  <table width="451" border="0">
 											            <tr>
 											              <td width="414"><select name="SWDS" class="form-control">
-											                <option value=""> --Please Select-- </option>
-											                <option value="0"> Physical Barrier </option>
-											                <option value="0.075"> Non-physical separation ≥ 3.0m </option>
-											                <option value="0.09"> Non-physical separation 1.0m to <3.0m </option>
-											                <option value="0.1"> Non-physical separation 0m to <1.0m </option>
-											                <option value="20"> None </option>
-											                <option value="5"> Informal path ≥ 1.0m </option>
-											                <option value="6"> Informal path 0m to <1.0m </option>
+											               <option value=""> --Please Select-- </option>
+																<option value="Physical Barrier:0"> Physical Barrier </option>
+																<option value="Non-physical separation ≥ 3.0m:0.075"> Non-physical separation ≥ 3.0m </option>
+																<option value="Non-physical separation 1.0m to <3.0m:0.09"> Non-physical separation 1.0m to <3.0m </option>
+																<option value="Non-physical separation 0m to <1.0m:0.1"> Non-physical separation 0m to <1.0m </option>
+																<option value="None:20"> None </option>
+																<option value="Informal path ≥ 1.0m:5"> Informal path ≥ 1.0m </option>
+																<option value="Informal path 0m to <1.0m:6"> Informal path 0m to <1.0m </option>
 										                  </select></td>
 											              <td width="6">&nbsp;</td>
 											              <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image27','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image27" height="20" id="Image27" /></a></td>
@@ -310,13 +310,13 @@ function MM_swapImage() { //v3.0
 											            <tr>
 											              <td width="414"><select name="SWPS" class="form-control">
 											                <option value=""> --Please Select-- </option>
-											                <option value="0"> Physical Barrier </option>
-											                <option value="0.075"> Non-physical separation ≥ 3.0m </option>
-											                <option value="0.09"> Non-physical separation 1.0m to <3.0m </option>
-											                <option value="0.1"> Non-physical separation 0m to <1.0m </option>
-											                <option value="20"> None </option>
-											                <option value="5"> Informal path ≥ 1.0m </option>
-											                <option value="6"> Informal path 0m to <1.0m </option>
+																<option value="Physical Barrier:0"> Physical Barrier </option>
+																<option value="Non-physical separation ≥ 3.0m:0.075"> Non-physical separation ≥ 3.0m </option>
+																<option value="Non-physical separation 1.0m to <3.0m:0.09"> Non-physical separation 1.0m to <3.0m </option>
+																<option value="Non-physical separation 0m to <1.0m:0.1"> Non-physical separation 0m to <1.0m </option>
+																<option value="None:20"> None </option>
+																<option value="Informal path ≥ 1.0m:5"> Informal path ≥ 1.0m </option>
+																<option value="Informal path 0m to <1.0m:6"> Informal path 0m to <1.0m </option>
 										                  </select></td>
 											              <td width="6">&nbsp;</td>
 											              <td width="17">&nbsp;</td>
@@ -333,10 +333,10 @@ function MM_swapImage() { //v3.0
 											            <tr>
 											              <td width="285"><select name="Curvature" class="form-control">
 											                <option value=""> --Please Select-- </option>
-											                <option value="1"> Straight or gently curving </option>
-											                <option value="1.8"> Moderate </option>
-											                <option value="3.5"> Sharp </option>
-											                <option value="6"> Very Sharp </option>
+																<option value="Straight or gently curving:1"> Straight or gently curving </option>
+																<option value="Moderate:1.8"> Moderate </option>
+																<option value="Sharp:3.5"> Sharp </option>
+																<option value="Very Sharp:6"> Very Sharp </option>
 										                  </select></td>
 											              <td width="6">&nbsp;</td>
 											              <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','../s2s/assets/images/selekoh.jpg',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image28" id="Image28" /></a></td>
@@ -353,9 +353,9 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="206"><select name="QOC" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> Adequate </option>
-													              <option value="1.25"> Poor </option>
-													              <option value="1"> Not Applicable </option>
+																<option value="Adequate:1"> Adequate </option>
+																<option value="Poor:1.25"> Poor </option>
+																<option value="Not Applicable:1"> Not Applicable </option>
 												                </select></td>
 													            <td width="132">&nbsp;</td>
 													            <td width="54"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image30','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image23" height="20" id="Image30" /></a></td>
@@ -372,8 +372,8 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="SD" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> Adequate </option>
-													              <option value="1.42"> Poor </option>
+																<option value="Adequate:1"> Adequate </option>
+																<option value="Poor:1.42"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image24" height="20" id="Image24" /></a></td>
@@ -390,9 +390,9 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="345"><select name="LW" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> Wide (≥ 3.25m) </option>
-													              <option value="1.2"> Medium (≥ 2.75m to < 3.25m) </option>
-													              <option value="1.5"> Narrow (≥ 0m to < 2.75m) </option>
+																<option value="Wide (>= 3.25m):1"> Wide (≥ 3.25m) </option>
+																<option value="Medium (>= 2.75m to < 3.25m):1.2"> Medium (≥ 2.75m to < 3.25m) </option>
+																<option value="Narrow (>= 0m to < 2.75m):1.5"> Narrow (≥ 0m to < 2.75m) </option>
 												                </select></td>
 													            <td width="5">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image210','','../s2s/assets/images/lebar_jalan.jpg',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image210" id="Image210" /></a></td>
@@ -409,8 +409,8 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="Delineation" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> Adequate </option>
-													              <option value="1.2"> Poor </option>
+																<option value="Adequate:1"> Adequate </option>
+																<option value="Poor:1.2"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image211','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image211" height="20" id="Image211" /></a></td>
@@ -427,9 +427,9 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="327"><select name="Grade" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> ≥ 0% to <7.5% </option>
-													              <option value="1.2"> ≥ 7.5% to <10% </option>
-													              <option value="1.7"> ≥ 10% </option>
+																<option value=">= 0% to <7.5%:1"> ≥ 0% to <7.5% </option>
+																<option value=">= 7.5% to <10%:1.2"> ≥ 7.5% to <10% </option>
+																<option value=">= 10%:1.7"> ≥ 10% </option>
 												                </select></td>
 													            <td width="7">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image212','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image212" height="20" id="Image212" /></a></td>
@@ -446,9 +446,9 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="RC" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> Good </option>
-													              <option value="1.2"> Medium </option>
-													              <option value="1.4"> Poor </option>
+																<option value="Good:1"> Good </option>
+																<option value="Medium:1.2"> Medium </option>
+																<option value="Poor:1.4"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image213','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image213" height="20" id="Image213" /></a></td>
@@ -465,11 +465,11 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="333"><select name="SRG" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> Sealed - adequate </option>
-													              <option value="1.4"> Sealed - medium </option>
-													              <option value="2"> Sealed - poor </option>
-													              <option value="3"> Unsealed - adequate </option>
-													              <option value="5.5"> Unsealed - poor </option>
+																<option value="Sealed - adequate:1"> Sealed - adequate </option>
+																<option value="Sealed - medium:1.4"> Sealed - medium </option>
+																<option value="Sealed - poor:2"> Sealed - poor </option>
+																<option value="Unsealed - adequate:3"> Unsealed - adequate </option>
+																<option value="Unsealed - poor:5.5"> Unsealed - poor </option>
 												                </select></td>
 													            <td width="7">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image214','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image214" height="20" id="Image214" /></a></td>
@@ -486,8 +486,8 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="SMTC" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1.25"> Not present </option>
-													              <option value="1"> Present </option>
+																<option value="Not present:1.25"> Not present </option>
+																<option value="Present:1"> Present </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image215','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image215" height="20" id="Image215" /></a></td>
@@ -504,9 +504,9 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="VP" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1.33"> Two sides </option>
-													              <option value="1.2"> One side </option>
-													              <option value="1"> None </option>
+																<option value="Two sides:1.33"> Two sides </option>
+																<option value="One side:1.2"> One side </option>
+																<option value="None:1"> None </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image216','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image216" height="20" id="Image216" /></a></td>
@@ -523,8 +523,8 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="SRS" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1.25"> Not present </option>
-													              <option value="1"> Present </option>
+																<option value="Not present:1.25"> Not present </option>
+																<option value="Present:1"> Present </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image217','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image217" height="20" id="Image217" /></a></td>
@@ -541,10 +541,10 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="370"><select name="SZW" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="0.9"> School zone flashing beacons </option>
-													              <option value="0.95"> School zone static signs or road markings </option>
-													              <option value="1"> No school zone warning </option>
-													              <option value="1"> Not applicable (no school at the location) </option>
+																<option value="School zone flashing beacons:0.9"> School zone flashing beacons </option>
+																<option value="School zone static signs or road markings:0.95"> School zone static signs or road markings </option>
+																<option value="No school zone warning:1"> No school zone warning </option>
+																<option value="Not applicable (no school at the location):1"> Not applicable (no school at the location) </option>
 												                </select></td>
 													            <td width="10">&nbsp;</td>
 													            <td width="64"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image218','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image218" height="20" id="Image218" /></a></td>
@@ -561,8 +561,8 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="SL" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1.25"> Not present </option>
-													              <option value="1"> Present </option>
+																<option value="Not present:1.25"> Not present </option>
+																<option value="Present:1"> Present </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image219','','../s2s/assets/images/lampu_jalan.jpg',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image219" id="Image219" /></a></td>
@@ -579,17 +579,17 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="370"><select name="PCF" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="0.4"> Grade separated facility </option>
-													              <option value="1"> Signalised with refuge </option>
-													              <option value="1.25"> Signalised without refuge </option>
-													              <option value="3.8"> Unsignalised marked crossing with refuge </option>
-													              <option value="4.8"> Unsignalised marked crossing without a refuge </option>
-													              <option value="5.1"> Refuge only </option>
-													              <option value="6.7"> No facility </option>
-													              <option value="2.5"> Unsignalised raised marked crossing with refuge </option>
-													              <option value="3.2"> Unsignalised raised marked crossing without refuge </option>
-													              <option value="3.4"> Raised unmarked crossing with refuge </option>
-													              <option value="4.5"> Raised unmarked crossing without refuge </option>
+																<option value="Grade separated facility:0.4"> Grade separated facility </option>
+																<option value="Signalised with refuge:1"> Signalised with refuge </option>
+																<option value="Signalised without refuge:1.25"> Signalised without refuge </option>
+																<option value="Unsignalised marked crossing with refuge:3.8"> Unsignalised marked crossing with refuge </option>
+																<option value="Unsignalised marked crossing without a refuge:4.8"> Unsignalised marked crossing without a refuge </option>
+																<option value="Refuge only:5.1"> Refuge only </option>
+																<option value="No facility:6.7"> No facility </option>
+																<option value="Unsignalised raised marked crossing with refuge:2.5"> Unsignalised raised marked crossing with refuge </option>
+																<option value="Unsignalised raised marked crossing without refuge:3.2"> Unsignalised raised marked crossing without refuge </option>
+																<option value="Raised unmarked crossing with refuge:3.4"> Raised unmarked crossing with refuge </option>
+																<option value="Raised unmarked crossing without refuge:4.5"> Raised unmarked crossing without refuge </option>
 												                </select></td>
 													            <td width="10">&nbsp;</td>
 													            <td width="64"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image220','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image220" height="20" id="Image220" /></a></td>
@@ -606,8 +606,8 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="PCQ" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> Adequate </option>
-													              <option value="1.5"> Poor </option>
+																<option value="Adequate:1"> Adequate </option>
+																<option value="Poor:1.5"> Poor </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image221','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image221" height="20" id="Image221" /></a></td>
@@ -624,22 +624,22 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="370"><select name="IT" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1.05"> Merge lane </option>
-													              <option value="1.5"> Roundabout </option>
-													              <option value="1.1"> 3-leg unsignalised with protected turn lane </option>
-													              <option value="1.1"> 3-leg unsignalised with no protected turn lane </option>
-													              <option value="1.1"> 3-leg signalised with protected turn lane </option>
-													              <option value="1.1"> 3-leg signalised with no protected turn lane </option>
-													              <option value="1.2"> 4-leg unsignalised with protected turn lane </option>
-													              <option value="1.2"> 4-leg unsignalised with no protected turn lane </option>
-													              <option value="1.2"> 4-leg signalised with protected turn lane </option>
-													              <option value="1.2"> 4-leg signalised with no protected turn lane </option>
-													              <option value="1"> None </option>
-													              <option value="1"> Railway Crossing - passive (signs only) </option>
-													              <option value="1"> Railway Crossing - active (flashing lights / boom gates) </option>
-													              <option value="1.1"> Median crossing point - informal </option>
-													              <option value="1.1"> Median crossing point - formal </option>
-													              <option value="1.3"> Mini roundabout </option>
+																<option value="Merge lane:1.05"> Merge lane </option>
+																<option value="Roundabout:1.5"> Roundabout </option>
+																<option value="3-leg unsignalised with protected turn lane:1.1"> 3-leg unsignalised with protected turn lane </option>
+																<option value="3-leg unsignalised with no protected turn lane:1.1"> 3-leg unsignalised with no protected turn lane </option>
+																<option value="3-leg signalised with protected turn lane:1.1"> 3-leg signalised with protected turn lane </option>
+																<option value="3-leg signalised with no protected turn lane:1.1"> 3-leg signalised with no protected turn lane </option>
+																<option value="4-leg unsignalised with protected turn lane:1.2"> 4-leg unsignalised with protected turn lane </option>
+																<option value="4-leg unsignalised with no protected turn lane:1.2"> 4-leg unsignalised with no protected turn lane </option>
+																<option value="4-leg signalised with protected turn lane:1.2"> 4-leg signalised with protected turn lane </option>
+																<option value="4-leg signalised with no protected turn lane:1.2"> 4-leg signalised with no protected turn lane </option>
+																<option value="None:1"> None </option>
+																<option value="Railway Crossing - passive (signs only):1"> Railway Crossing - passive (signs only) </option>
+																<option value="Railway Crossing - active (flashing lights / boom gates):1"> Railway Crossing - active (flashing lights / boom gates) </option>
+																<option value="Median crossing point - informal:1.1"> Median crossing point - informal </option>
+																<option value="Median crossing point - formal:1.1"> Median crossing point - formal </option>
+																<option value="Mini roundabout:1.3"> Mini roundabout </option>
 												                </select></td>
 													            <td width="10">&nbsp;</td>
 													            <td width="64"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image222','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image222" height="20" id="Image222" /></a></td>
@@ -656,9 +656,9 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="IQ" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="1"> Adequate </option>
-													              <option value="1.2"> Poor </option>
-													              <option value="1"> Not Applicable </option>
+																<option value="Adequate:1"> Adequate </option>
+																<option value="Poor:1.2"> Poor </option>
+																<option value="Not Applicable:1"> Not Applicable </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image223','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image223" height="20" id="Image223" /></a></td>
@@ -674,9 +674,9 @@ function MM_swapImage() { //v3.0
 													  <table width="242" border="0">
 													          <tr>
 													            <td width="330"><select name="PF" class="form-control">
-													              <option value=""> --Please Select-- </option>
-													              <option value="1.25"> Not present </option>
-													              <option value="1"> Present</option>
+													             <option value=""> --Please Select-- </option>
+																<option value="Not present:1.25"> Not present </option>
+																<option value="Present:1"> Present</option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image224','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image224" height="20" id="Image224" /></a></td>
@@ -705,31 +705,31 @@ function MM_swapImage() { //v3.0
 													          <tr>
 													            <td width="330"><select name="OS85P" class="form-control">
 													              <option value=""> --Please Select-- </option>
-													              <option value="0"> <30km/h </option>
-													              <option value="0.04"> 35km/h </option>
-													              <option value="0.05"> 40km/h </option>
-													              <option value="0.08"> 45km/h </option>
-													              <option value="0.12"> 50km/h </option>
-													              <option value="0.18"> 55km/h </option>
-													              <option value="0.25"> 60km/h </option>
-													              <option value="0.3"> 65km/h </option>
-													              <option value="0.4"> 70km/h </option>
-													              <option value="0.49"> 75km/h </option>
-													              <option value="0.55"> 80km/h </option>
-													              <option value="0.56"> 85km/h </option>
-													              <option value="0.6"> 90km/h </option>
-													              <option value="0.63"> 95km/h </option>
-													              <option value="0.66"> 100km/h </option>
-													              <option value="0.7"> 105km/h </option>
-													              <option value="0.74"> 110km/h </option>
-													              <option value="0.76"> 115km/h </option>
-													              <option value="0.8"> 120km/h </option>
-													              <option value="0.84"> 125km/h </option>
-													              <option value="0.86"> 130km/h </option>
-													              <option value="0.9"> 135km/h </option>
-													              <option value="0.94"> 140km/h </option>
-													              <option value="0.96"> 145km/h </option>
-													              <option value="1"> >=150km/h </option>
+																<option value="<30km/h:0"> <30km/h </option>
+																<option value="35km/h:0.04"> 35km/h </option>
+																<option value="40km/h:0.05"> 40km/h </option>
+																<option value="45km/h:0.08"> 45km/h </option>
+																<option value="50km/h:0.12"> 50km/h </option>
+																<option value="55km/h:0.18"> 55km/h </option>
+																<option value="60km/h:0.25"> 60km/h </option>
+																<option value="65km/h:0.3"> 65km/h </option>
+																<option value="70km/h:0.4"> 70km/h </option>
+																<option value="75km/h:0.49"> 75km/h </option>
+																<option value="80km/h:0.55"> 80km/h </option>
+																<option value="85km/h:0.56"> 85km/h </option>
+																<option value="90km/h:0.6"> 90km/h </option>
+																<option value="95km/h:0.63"> 95km/h </option>
+																<option value="100km/h:0.66"> 100km/h </option>
+																<option value="105km/h:0.7"> 105km/h </option>
+																<option value="110km/h:0.74"> 110km/h </option>
+																<option value="115km/h:0.76"> 115km/h </option>
+																<option value="120km/h:0.8"> 120km/h </option>
+																<option value="125km/h:0.84"> 125km/h </option>
+																<option value="130km/h:0.86"> 130km/h </option>
+																<option value="135km/h:0.9"> 135km/h </option>
+																<option value="140km/h:0.94"> 140km/h </option>
+																<option value="145km/h:0.96"> 145km/h </option>
+																<option value=">=150km/h:1"> >=150km/h </option>
 												                </select></td>
 													            <td width="8">&nbsp;</td>
 													            <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image226','','../s2s/assets/images/Info.png',1)"><img src="../s2s/assets/images/Infomo.png" alt="" name="Image226" height="20" id="Image226" /></a></td>
