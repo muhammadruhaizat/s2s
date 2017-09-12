@@ -70,19 +70,19 @@
 		<?php
 
 			if ($star_value == '5') { ?>
-				<img src="<?php echo base_url();?>assets/images/5-stars.jpeg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/5-stars.jpeg" style="width:500px;"/>
 				<?php
 			} else if ($star_value == '4') { ?>
-				<img src="<?php echo base_url();?>assets/images/4-stars.jpeg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/4-stars.jpeg" style="width:500px;"/>
 				<?php
 			} else if ($star_value == '3') { ?>
-				<img src="<?php echo base_url();?>assets/images/3-stars.jpeg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/3-stars.jpeg" style="width:500px;"/>
 				<?php
 			} else if ($star_value == '2') { ?>
-				<img src="<?php echo base_url();?>assets/images/2-stars.jpeg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/2-stars.jpeg" style="width:500px;"/>
 				<?php
 			} else if ($star_value == '1') { ?>
-				<img src="<?php echo base_url();?>assets/images/1-star.jpeg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/1-star.jpeg" style="width:500px;"/>
 				<?php
 			}
 			?>
@@ -157,6 +157,152 @@
 						</div>
 						
 						<div id="dmapx" class="fade">
+
+						<?php
+							$query = $this->db->query("SELECT * FROM `assessment_text` LIMIT 1");
+
+							$row = $query->row();
+
+							if (isset($row))
+								{
+        							$NOLD = $row->NOL;
+        							$MTD = $row->MT;
+        							$SWDSD = $row->SWDS;
+        							$SWPSD = $row->SWPS;
+        							$curvatureD = $row->Curvature;
+        							$QOCD = $row->QOC;
+        							$SDD = $row->SD;
+        							$LWD = $row->LW;
+        							$DelineationD = $row->Delineation;
+        							$GradeD = $row->Grade;
+        							$RCD = $row->RC;
+        							$SRGD = $row->SRG;
+        							$SMTCD = $row->SMTC;
+        							$VPD = $row->VP;
+        							$SRSD = $row->SRS;
+        							$SZWD = $row->SZW;
+        							$SLD = $row->SL;
+        							$PCFD = $row->PCF;
+        							$PCQD = $row->PCQ;
+        							$ITD = $row->IT;
+        							$IQD = $row->IQ;
+        							$PFD = $row->PF;
+        							$EFID = $row->EFI;
+        							$OS85PD = $row->OS85P;
+        							$ADSSRSD = $row->ADSSRS;
+        							$APSSRSD = $row->APSSRS;
+        							$CIRSRSD = $row->CIRSRS;
+        							$CSRSRSD = $row->CSRSRS;
+        							$AV_WalkD = $row->AV_Walk;
+        							$SRD = $row->SR;
+        							$star_rateD = $row->star_rate;
+        							$TSD = $row->TS;
+								}								
+
+						?>
+
+						<div class="tg-wrap"><table class="tg">
+						  <tr>
+						    <th class="tg-9hbo">Number of lanes</th>
+						    <th class="tg-yw4l"><?php echo $NOLD ?></th>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Median Type</td>
+						    <td class="tg-yw4l"><?php echo $MTD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Sidewalk - Driver Side</td>
+						    <td class="tg-yw4l"><?php echo $SWDSD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Sidewalk - Passenger Side</td>
+						    <td class="tg-yw4l"><?php echo $SWPSD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Curvature</td>
+						    <td class="tg-yw4l"><?php echo $curvatureD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Quality of Curve</td>
+						    <td class="tg-yw4l"><?php echo $QOCD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Sight Distance</td>
+						    <td class="tg-yw4l"><?php echo $SDD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Lane Width</td>
+						    <td class="tg-yw4l"><?php echo $LWD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Delineation</td>
+						    <td class="tg-yw4l"><?php echo $DelineationD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Grade</td>
+						    <td class="tg-yw4l"><?php echo $GradeD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Road Condition</td>
+						    <td class="tg-yw4l"><?php echo $RCD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Skid Resistance / Grip</td>
+						    <td class="tg-yw4l"><?php echo $SRGD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Speed Management / Traffic Calming</td>
+						    <td class="tg-yw4l"><?php echo $SMTCD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Vehicle Parking</td>
+						    <td class="tg-yw4l"><?php echo $VPD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Shoulder Rumble Strips</td>
+						    <td class="tg-yw4l"><?php echo $SRSD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">School Zone Warning</td>
+						    <td class="tg-yw4l"><?php echo $SZWD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Street Lighting</td>
+						    <td class="tg-yw4l"><?php echo $SLD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Pedestrian Crossing Facilities</td>
+						    <td class="tg-yw4l"><?php echo $PCFD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Pedestrian Crossing Quality</td>
+						    <td class="tg-yw4l"><?php echo $PCQD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Intersection Type</td>
+						    <td class="tg-yw4l"><?php echo $ITD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Intersection Quality</td>
+						    <td class="tg-yw4l"><?php echo $IQD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Pedestrian Fencing</td>
+						    <td class="tg-yw4l"><?php echo $PFD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">External Flow Influence</td>
+						    <td class="tg-yw4l"><?php echo $EFID ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Operating Speed (85th percentile)</td>
+						    <td class="tg-yw4l"><?php echo $OS85PD ?></td>
+						  </tr>
+						  <tr>
+						    <td class="tg-9hbo">Date of Assessment</td>
+						    <td class="tg-yw4l"><?php echo $TSD ?></td>
+						  </tr>
+						</table></div>
 
 
 
