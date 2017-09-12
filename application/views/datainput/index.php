@@ -319,7 +319,7 @@ function MM_swapImage() { //v3.0
 											              <td width="414"><select name="SWDS" class="form-control">
 											               <option value=""> --Please Select-- </option>
 																<option value="Physical Barrier:0"> Physical Barrier </option>
-																<option value="Non-physical separation ≥ 3.0m:0.075"> Non-physical separation ≥ 3.0m </option>
+																<option value="Non-physical separation >= 3.0m:0.075"> Non-physical separation ≥ 3.0m </option>
 																<option value="Non-physical separation 1.0m to <3.0m:0.09"> Non-physical separation 1.0m to <3.0m </option>
 																<option value="Non-physical separation 0m to <1.0m:0.1"> Non-physical separation 0m to <1.0m </option>
 																<option value="None:20"> None </option>
@@ -343,7 +343,7 @@ function MM_swapImage() { //v3.0
 											              <td width="414"><select name="SWPS" class="form-control">
 											                <option value=""> --Please Select-- </option>
 																<option value="Physical Barrier:0"> Physical Barrier </option>
-																<option value="Non-physical separation ≥ 3.0m:0.075"> Non-physical separation ≥ 3.0m </option>
+																<option value="Non-physical separation >= 3.0m:0.075"> Non-physical separation ≥ 3.0m </option>
 																<option value="Non-physical separation 1.0m to <3.0m:0.09"> Non-physical separation 1.0m to <3.0m </option>
 																<option value="Non-physical separation 0m to <1.0m:0.1"> Non-physical separation 0m to <1.0m </option>
 																<option value="None:20"> None </option>

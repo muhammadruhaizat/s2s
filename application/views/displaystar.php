@@ -100,12 +100,12 @@
 						</li>
 						<li>
 							<a data-toggle="tab" href="#dmapx">
-								Safety Assessment
+								Road Safety Assessment Details
 							</a>
 						</li>
 						<li>
 							<a data-toggle="tab" href="#dmapoverall">
-								Map Display
+								Suggestion for Improvements
 							</a>
 						</li>
 					</ul>
@@ -309,6 +309,107 @@
 						</div>
 							
 						<div id="dmapoverall" class="fade">
+
+						<?php
+
+							$improve = array();
+
+							$query = $this->db->query("SELECT * FROM `assessment` LIMIT 1");
+
+							$row = $query->row();
+
+							if (isset($row))
+								{
+        							$MT = $row->MT;
+        								if ($MT > 1.6) {
+        									array_push($improve, 'Median Type');
+        								}
+        							$SWDS = $row->SWDS;
+        								if ($SWDS > 0.1) {
+        									array_push($improve, 'Sidewalk (Driver Side) - Consider installing physical barrier or non-physical separation with size > 1 meter');
+        								}
+        							$SWPS = $row->SWPS;
+        								if ($SWPS > 0.1) {
+        									array_push($improve, 'Sidewalk (Passenger Side) - Consider installing physical barrier or non-physical separation with size > 1 meter');
+        								}
+        							$curvature = $row->Curvature;
+        								if ($curvature > 0.1) {
+        									array_push($improve, 'Curvature - Improvement for straight/gently curving or at least moderate');
+        								}
+        							$Delineation = $row->Delineation;
+        								if ($Delineation > 0.1) {
+        									array_push($improve, 'Delineation - Ensure adequate delineation exists');
+        								}
+        							$Grade = $row->Grade;
+        								if ($Grade > 0.1) {
+        									array_push($improve, 'Grade - At least < 10%');
+        								}
+        							$RC = $row->RC;
+        								if ($RC > 0.1) {
+        									array_push($improve, 'Road condition - Ensure good road condition');
+        								}
+        							$SRG = $row->SRG;
+        								if ($SRG > 0.1) {
+        									array_push($improve, 'Skid Resistance / Grip - Suggested to be at least sealed at medium level');
+        								}
+        							$SMTC = $row->SMTC;
+        								if ($SMTC > 0.1) {
+        									array_push($improve, 'Speed management / traffic calming - Deploy traffic calming countermeasures');
+        								}
+        							$VP = $row->VP;
+        								if ($VP > 0.1) {
+        									array_push($improve, 'Vehicle parking - remove vehicle parking');
+        								}
+        							$SRS = $row->SRS;
+        								if ($SRS > 0.1) {
+        									array_push($improve, 'Shoulder rumble strips - Consider deploying this countermeasure');
+        								}
+        							$SL = $row->SL;
+        								if ($SL > 0.1) {
+        									array_push($improve, 'Street lighting - Consider deploying this countermeasure');
+        								}
+        							$PCF = $row->PCF;
+        								if ($PCF > 0.1) {
+        									array_push($improve, 'Pedestrian Crossing Facilities - Recommended for at grade seperated facility or signalised with refuge');
+        								}
+        							$PCQ = $row->PCQ;
+        								if ($PCQ > 0.1) {
+        									array_push($improve, 'Pedestrian Crossing Quality - Ensure adequate quality');
+        								}
+        							$PF = $row->PF;
+        								if ($PF > 0.1) {
+        									array_push($improve, 'Pedestrian Fencing - Consider deploying this countermeasure');
+        								}
+        							$star_rate = $row->star_rate;
+        								if ($star_rate > 4) {
+        									$message = 'Congratulations of achieving 5 star rating. Other improvement items for your consideration';
+        								} else {
+        									$message = 'Suggested list of items for improvements';
+        								}
+
+								}
+
+								$max = count($improve); ?>
+
+								<div class="tg-wrap"; style="text-align:center;">
+
+
+								<header>
+  									<h2><?php echo $message; ?></h2>
+								</header>
+
+								<table class="tg">
+
+								<?php
+								for ($i = 0; $i < $max; $i++)
+								{
+								    echo '<tr>';
+								    echo "<td>{$improve[$i]}</td>";
+								    echo '</tr>';
+								}
+								echo '</table></div>';								
+
+						?>
 
 
 							
