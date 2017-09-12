@@ -63,7 +63,7 @@
 																<option value="1.8"> Two and one </option>
 																<option value="4"> Three and two </option>
 															</select>
-											          <img src="file:///C|/xampp/htdocs/safer2school/s2s/assets/images/tooltip.ico" alt="" /></div>
+											          <img src="<?php echo base_url();?>assets/images/tooltip.ico" alt="" /></div>
 												</div>
 											</div>
 											<div class="form-group">

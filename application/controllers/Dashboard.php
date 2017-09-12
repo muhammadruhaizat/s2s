@@ -25,11 +25,37 @@ class Dashboard extends CI_Controller {
     }
 	public function index()
 	{
-		$query = $this->db->query('SELECT COUNT(KodSekolah) FROM senarai_sekolah');
-		$data['total_senarai_sekolah'] = $query->result();
+		$query = $this->db->query('SELECT COUNT(KodSekolah) AS val FROM senarai_sekolah');
+		$data['total_senarai_sekolah'] = $query->row();
 		
-		$query = $this->db->query('SELECT COUNT(KodSekolah) FROM senarai_sekolah AS ss INNER JOIN assessment AS a ON ss.KodSekolah = a.IDSchool');
-		$data['total_senarai_sekolah_rated'] = $query->result();
+		$query = $this->db->query('SELECT COUNT(KodSekolah) AS val FROM senarai_sekolah AS ss INNER JOIN assessment AS a ON ss.KodSekolah = a.IDSchool');
+		$data['total_senarai_sekolah_rated'] = $query->row();
+		
+		$data['total_senarai_sekolah_unrated'] = intval($data['total_senarai_sekolah']->val) - intval($data['total_senarai_sekolah_rated']->val);
+		
+		$query = $this->db->query('SELECT COUNT(KodSekolah) AS val FROM senarai_sekolah AS ss INNER JOIN assessment AS a ON ss.KodSekolah = a.IDSchool WHERE a.star_rate = 1');
+		$data['total_senarai_sekolah_1star'] = $query->row();
+		
+		$query = $this->db->query('SELECT COUNT(KodSekolah) AS val FROM senarai_sekolah AS ss INNER JOIN assessment AS a ON ss.KodSekolah = a.IDSchool WHERE a.star_rate = 2');
+		$data['total_senarai_sekolah_2star'] = $query->row();
+		
+		$query = $this->db->query('SELECT COUNT(KodSekolah) AS val FROM senarai_sekolah AS ss INNER JOIN assessment AS a ON ss.KodSekolah = a.IDSchool WHERE a.star_rate = 3');
+		$data['total_senarai_sekolah_3star'] = $query->row();
+		
+		$query = $this->db->query('SELECT COUNT(KodSekolah) AS val FROM senarai_sekolah AS ss INNER JOIN assessment AS a ON ss.KodSekolah = a.IDSchool WHERE a.star_rate = 4');
+		$data['total_senarai_sekolah_4star'] = $query->row();
+		
+		$query = $this->db->query('SELECT COUNT(KodSekolah) AS val FROM senarai_sekolah AS ss INNER JOIN assessment AS a ON ss.KodSekolah = a.IDSchool WHERE a.star_rate = 5');
+		$data['total_senarai_sekolah_5star'] = $query->row();
+		
+		$query = $this->db->query('SELECT COUNT(KodSekolah) AS val FROM senarai_sekolah AS ss LEFT JOIN assessment AS a ON ss.KodSekolah = a.IDSchool WHERE a.IDSchool IS NULL');
+		$data['total_senarai_sekolah_nostar'] = $query->row();
+		
+		$query = $this->db->query('SELECT COUNT(Negeri) AS val, Negeri FROM senarai_sekolah GROUP BY Negeri');
+		$data['total_senarai_sekolah_negeri'] = $query->result();
+		
+		$query = $this->db->query('SELECT COUNT(PeringkatSekolah) AS val, PeringkatSekolah FROM senarai_sekolah GROUP BY PeringkatSekolah');
+		$data['total_senarai_sekolah_peringkat'] = $query->result();
 		
 		$this->load->view('dashboard',$data);
 	}
