@@ -4,6 +4,14 @@
 
 	<script type="text/javascript">
 		jQuery(function($) {
+			
+				$( "#show-option" ).tooltip({
+					show: {
+						effect: "slideDown",
+						delay: 250
+					}
+				});
+
 			$('.date-picker').datepicker({
 				autoclose: true,
 				todayHighlight: true
@@ -19,7 +27,7 @@
 			<?php foreach($senarai_sekolah as $eachSekolah):?>
 				senaraiSekolah.push({
 					id: "<?php echo $eachSekolah->KodSekolah;?>",
-					label: "<?php echo $eachSekolah->NamaSekolah.", ".$eachSekolah->PoskodSurat." ".$eachSekolah->BandarSurat." "." ".$eachSekolah->Negeri." [ Kod Sekolah : ".$eachSekolah->KodSekolah." ]";?>"						
+					label: "<?php echo $eachSekolah->NamaSekolah.", ".$eachSekolah->PoskodSurat." ".$eachSekolah->BandarSurat.", ".$eachSekolah->Negeri." [ Kod Sekolah : ".$eachSekolah->KodSekolah." ]";?>"						
 				});
 			<?php endforeach;?>
 			
@@ -32,8 +40,8 @@
 			});
 			
 			
-									$(".widget-body").show();
-									$(".alert-danger").hide();
+			$(".widget-body").show();
+			$(".alert-danger").hide();
 			
 			//bootbox.confirm("<h4>Sila log masuk untuk melakukan input data</h4>\
 			//	<table><tr><td>ID Pengguna</td><td>:&nbsp;</td><td><input type='text' name='username' style='margin:5px;' /></td></tr>\
@@ -72,6 +80,33 @@
 		overflow-y: auto;
 		/* prevent horizontal scrollbar */
 		overflow-x: hidden;
+		z-index:3;
+	}
+	
+	div.popupTitle{
+		display: none;
+		font-family: Arial, Helvetica, sans-serif;
+		border:1px solid grey;
+		background-color:white;
+		width:auto;
+		left:50px;
+		text-align:left;
+		color:black;
+		padding:5px;
+		border-radius:5px;
+	}
+	.fa-info-circle:hover div.popupTitle{
+		display: block;
+		position: absolute;
+		font-family: Arial, Helvetica, sans-serif;
+		border:1px solid grey;
+		background-color:white;
+		width:auto;
+		right:50px;
+		text-align:left;
+		color:black;
+		padding:5px;
+		border-radius:5px;
 	}
 	</style>
 	<script type="text/javascript">
@@ -144,6 +179,12 @@ function MM_swapImage() { //v3.0
 										</button>
 									</div>
 
+									<i class="fa fa-info-circle" style="color:red;">
+										<div class="popupTitle">
+											<img src="<?php echo base_url();?>assets/images/Info.png"/>
+										</div>
+									</i>
+
 									<div class="widget-body" style="display:none;">
 										<div class="widget-main no-padding">
 											<form class="form-horizontal" role="form" method="post" action="process/processdata" enctype="multipart/form-data">
@@ -195,10 +236,16 @@ function MM_swapImage() { //v3.0
 										                  <option value="4"> Three and two </option>
 									                    </select></td>
 										                <td width="6">&nbsp;</td>
-										                <td width="17"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','../s2s/assets/images/lanes_number.gif',1)"><img src="../s2s/assets/images/infomo.png" alt="" id="Image25" /></a></td>
-									                  </tr>
+										                <td width="17">
+														
+									<a href="#" style="background-image:url('<?php echo base_url();?>assets/images/Info.png');">
+										<div class="popupTitle">
+											<img src="<?php echo base_url();?>assets/images/lanes_number.gif"/>
+										</div>
+									</a>
+									
+														</tr>
 									                </table>
-												    <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','../s2s/assets/images/Info.png',1)"></a>													</div>
 												</div>
 											</div>
 											<div class="form-group">

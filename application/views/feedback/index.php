@@ -20,28 +20,36 @@
 			.next().on(ace.click_event, function(){
 				$(this).prev().focus();
 			});
-		});
 				
-						var senaraiSekolah = [];
-						
-						<?php $i=0; foreach($senarai_sekolah as $eachSekolah): $i++;?>
-							<?php if($i < 2):?>
-							senaraiSekolah.push({
-								id: "<?php echo $eachSekolah->KodSekolah;?>",
-								label: "<?php echo $eachSekolah->NamaSekolah." ".$eachSekolah->PoskodSurat." ".$eachSekolah->Negeri." [ ID : ".$eachSekolah->KodSekolah." ]";?>"						
-							});
-							<?php endif;?>
-						<?php endforeach;?>
-						
-						$('input[name=schoolName]').autocomplete({
-							source: senaraiSekolah,
-							select: function (event, ui) {
-								alert("test");
-								$("input[name=schoolName]").val(ui.item.label); // display the selected text
-								$("input[name=schoolID]").val(ui.item.id); // save selected id to hidden input
-							}
-						});
+			var senaraiSekolah = [];
+			
+			<?php foreach($senarai_sekolah as $eachSekolah):?>
+				senaraiSekolah.push({
+					id: "<?php echo $eachSekolah->KodSekolah;?>",
+					label: "<?php echo $eachSekolah->NamaSekolah.", ".$eachSekolah->PoskodSurat." ".$eachSekolah->BandarSurat.", ".$eachSekolah->Negeri." [ ID : ".$eachSekolah->KodSekolah." ]";?>",
+					class: "<?php echo $eachSekolah->AlamatSurat.", ".$eachSekolah->PoskodSurat." ".$eachSekolah->BandarSurat.", ".$eachSekolah->Negeri;?>"
+				});
+			<?php endforeach;?>
+			
+			$('input[name=schoolName]').autocomplete({
+				source: senaraiSekolah,
+				select: function (event, ui) {
+					$("input[name=schoolName]").val(ui.item.label); // display the selected text
+					$("input[name=schoolID]").val(ui.item.id); // save selected id to hidden input
+					$("input[name=alamatSekolah]").val(ui.item.class); // save selected id to hidden input
+				}
+			});
+		});
 	</script>
+	<style>
+	.ui-autocomplete {
+		max-height: 300px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+		z-index:3;
+	}
+	</style>
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
@@ -82,13 +90,12 @@
 												<div class="col-sm-5">
 													 <input name="schoolName" type="text" class="form-control" placeholder="Taip dan Pilih Nama Sekolah" />
                                                      <input name="schoolID" type="hidden" />
-				
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Alamat Sekolah </label>
 												<div class="col-sm-5">
-													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="Jalan TKS 1" />
+													<input name="alamatSekolah" type="text" id="form-field-1" class="col-sm-12" placeholder="Jalan TKS 1" />
 												</div>
 											</div>
 											<div class="form-group">
