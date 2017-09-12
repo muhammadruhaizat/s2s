@@ -70,19 +70,19 @@
 		<?php
 
 			if ($star_value == '5') { ?>
-				<img src="<?php echo base_url();?>/assets/images/5-stars.jpg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/5-stars.jpeg" style="width:500px;"/>
 				<?php
 			} else if ($star_value == '4') { ?>
-				<img src="<?php echo base_url();?>/assets/images/4-stars.jpg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/4-stars.jpeg" style="width:500px;"/>
 				<?php
 			} else if ($star_value == '3') { ?>
-				<img src="<?php echo base_url();?>/assets/images/3-stars.jpg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/3-stars.jpeg" style="width:500px;"/>
 				<?php
 			} else if ($star_value == '2') { ?>
-				<img src="<?php echo base_url();?>/assets/images/2-stars.jpg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/2-stars.jpeg" style="width:500px;"/>
 				<?php
 			} else if ($star_value == '1') { ?>
-				<img src="<?php echo base_url();?>/assets/images/1-star.jpg" style="width:500px;"/>
+				<img src="<?php echo base_url();?>/assets/images/1-star.jpeg" style="width:500px;"/>
 				<?php
 			}
 			?>
