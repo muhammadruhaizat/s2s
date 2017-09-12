@@ -102,19 +102,19 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Home</a>
+								<a href="#">Utama</a>
 							</li>
-							<li class="active">Dashboard</li>
+							<li class="active">Paparan Utama</li>
 						</ul><!-- /.breadcrumb -->
 					</div>
 
 					<div class="page-content">
 						<div class="page-header">
 							<h1>
-								Dashboard
+								Paparan Utama
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-									overview &amp; stats
+									carta
 								</small>
 							</h1>
 						</div><!-- /.page-header -->

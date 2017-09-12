@@ -12,9 +12,68 @@
 			.next().on(ace.click_event, function(){
 				$(this).prev().focus();
 			});
+			
+			
+			var senaraiSekolah = [];
+			
+			<?php foreach($senarai_sekolah as $eachSekolah):?>
+				senaraiSekolah.push({
+					id: "<?php echo $eachSekolah->KodSekolah;?>",
+					label: "<?php echo $eachSekolah->NamaSekolah.", ".$eachSekolah->PoskodSurat." ".$eachSekolah->BandarSurat." "." ".$eachSekolah->Negeri." [ Kod Sekolah : ".$eachSekolah->KodSekolah." ]";?>"						
+				});
+			<?php endforeach;?>
+			
+			$('input[name=schoolName]').autocomplete({
+				source: senaraiSekolah,
+				select: function (event, ui) {
+					$("input[name=schoolName]").val(ui.item.label); // display the selected text
+					$("input[name=schoolID]").val(ui.item.id); // save selected id to hidden input
+				}
+			});
+			
+			
+									$(".widget-body").show();
+									$(".alert-danger").hide();
+			
+			//bootbox.confirm("<h4>Sila log masuk untuk melakukan input data</h4>\
+			//	<table><tr><td>ID Pengguna</td><td>:&nbsp;</td><td><input type='text' name='username' style='margin:5px;' /></td></tr>\
+			//	<tr><td>Kata Laluan</td><td>:&nbsp;</td><td><input type='password' name='password' style='margin:5px;' /></td></tr></table>\
+			//	", function(result) {
+			//		if(result == true){
+			//			var uname = $("input[name=username]").val();
+			//			var pwd = $("input[name=password]").val();
+			//			
+			//			var datastr = '{"mode":"LogIn","Username":"'+uname+'","Password":"'+pwd+'"}';
+			//			$.ajax({
+			//				url: "<?php echo base_url();?>main/ajax",
+			//				type: "POST",
+			//				data: {"datastr":datastr},
+			//				success: function(data){
+			//					if(data == "Gagal"){
+			//						$(".widget-body").hide();
+			//						$(".alert-danger").show();
+			//					}else{
+			//						$(".widget-body").show();
+			//						$(".alert-danger").hide();
+			//						$("input[name=IDPengguna]").val(data);
+			//					}
+			//				}
+			//			});	
+			//		}else{
+			//			$(".widget-body").show();
+			//			$(".alert-danger").hide();
+			//		}
+			//});
 		});
 	</script>
-
+	<style>
+	.ui-autocomplete {
+		max-height: 300px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+	}
+	</style>
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
@@ -46,10 +105,55 @@
 									<div class="widget-header">
 										<h4 class="widget-title">Assessment</h4>
 									</div>
-									<div class="widget-body">
+									<div class="alert alert-danger" style="display:none;">
+										<strong>
+											<i class="ace-icon fa fa-times"></i>
+											Harap maaf!
+										</strong>
+										Anda tiada akses untuk input data.
+										<br />
+										<br />
+										<button class="btn btn-sm btn-info">
+											Log Masuk
+											<i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+										</button>
+									</div>
+
+									<div class="widget-body" style="display:none;">
 										<div class="widget-main no-padding">
 											<form class="form-horizontal" role="form" method="post" action="process/processdata" enctype="multipart/form-data">
 											<br/>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> ID Pengguna </label>
+												<div class="col-sm-5">
+													<div class="input-group col-sm-12">
+													  <table width="200" border="0">
+										              <tr>
+										                <td><input type="text" disabled name="IDPengguna"/></td>
+										                <td>&nbsp;</td>
+										                <td></td>
+									                  </tr>
+										              </table>
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Sekolah </label>
+												<div class="col-sm-5">
+													<div class="input-group col-sm-12">
+													  <table width="530" border="0">
+										              <tr>
+										                <td>
+															<input name="schoolName" type="text" class="form-control" placeholder="Taip dan Pilih Nama Sekolah" />
+															<input name="schoolID" type="hidden" />
+														 </td>
+										                <td>&nbsp;</td>
+										                <td></td>
+									                  </tr>
+										              </table>
+													</div>
+												</div>
+											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Number of lanes </label>
 												<div class="col-sm-5">

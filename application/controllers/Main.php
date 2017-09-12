@@ -25,7 +25,7 @@ class Main extends CI_Controller {
     }
 	public function index()
 	{
-		$query = $this->db->query('SELECT * FROM senarai_sekolah WHERE Latitude != "0"');
+		$query = $this->db->query('SELECT * FROM senarai_sekolah LEFT JOIN assessment ON senarai_sekolah.KodSekolah = assessment.IDSchool WHERE senarai_sekolah.Latitude != "0"');
 		$data['senarai_sekolah'] = $query->result();
 		$this->load->view('main',$data);
 	}
@@ -47,6 +47,17 @@ class Main extends CI_Controller {
 
 				$this->db->where('KodSekolah', $KodSekolah);
 				$this->db->update('senarai_sekolah', $data); 
+			break;
+			case "LogIn":
+				$Username = $obj->Username;
+				$Password = $obj->Password;
+				
+				$query = $this->db->query("SELECT * FROM user WHERE username = '$Username' AND katalaluan = '$Password'");
+				if($query->num_rows() > 0){
+					echo $query->row()->tahap;
+				}else{
+					echo "Gagal";
+				}
 			break;
 		}
 	}
