@@ -29,6 +29,38 @@ class feedback extends CI_Controller {
 		$this->load->view('feedback/index',$data);
 		$this->load->view("footer");
 	}
+
+	function processdata()
+	{
+		ini_set('MAX_EXECUTION_TIME', -1);
+
+
+            $schoolID  = $this->input->post('schoolID');
+            $Nama  = $this->input->post('Nama');
+            $Emel  = $this->input->post('Emel');
+            $NoTelefon  = $this->input->post('NoTelefon');
+            $Feedback  = $this->input->post('Feedback');
+            $Kategori  = $this->input->post('Kategori');
+            
+       ////Prepare upload data - value
+        $upload_data = Array(
+            'KodSekolah' => $schoolID,
+            'nama' => $Nama,
+            'emel' => $Emel,
+            'nofon' => $NoTelefon,
+            'Feedback' => $Feedback,
+            'kategori' => $Kategori,
+
+        );
+        ////Insert into table feedback
+        $this->db->insert('feedback', $upload_data);
+
+
+        //Alert success redirect to ?success
+		//redirect("main");
+		$this->load->view("feedbacktq");
+
+    }
 	
 	
 	

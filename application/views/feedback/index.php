@@ -88,55 +88,52 @@
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Kod Sekolah </label>
 												<div class="col-sm-5">
-													 <input name="schoolName" type="text" class="form-control" placeholder="Taip dan Pilih Nama Sekolah" />
+													 <input name="KodSekolah" type="text" class="form-control" placeholder="Taip dan Pilih Nama Sekolah" />
                                                      <input name="schoolID" type="hidden" />
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Alamat Sekolah </label>
 												<div class="col-sm-5">
-													<input name="alamatSekolah" type="text" id="form-field-1" class="col-sm-12" placeholder="Jalan TKS 1" />
+													<input name="AlamatSekolah" type="text" id="form-field-1" class="col-sm-12" placeholder="Jalan TKS 1" />
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Nama </label>
 												<div class="col-sm-5">
-													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
+													<input name="Nama" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Emel </label>
 												<div class="col-sm-5">
-													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
+													<input name="Emel" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
 												</div>
 											</div>
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> No. Telefon </label>
 												<div class="col-sm-5">
-													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
+													<input name="NoTelefon" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
 												</div>
 											</div>
-											<!--<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Riding Speed (KM/H) </label>
+
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Kategori </label>
+		
 												<div class="col-sm-5">
-													<div class="input-group col-sm-12">
-															<select name="ridingSpeed" class="form-control">
-																<option value=""> --Please Select Speed-- </option>
-																<option value="10"> 10 </option>
-																<option value="20"> 20 </option>
-																<option value="30"> 30 </option>
-																<option value="40"> 40 </option>
-																<option value="50"> 50 </option>
-															</select>
-													</div>
+													<select name="Kategori" class="form-control">
+													             <option value=""> --Please Select-- </option>
+																<option value="Aduan"> Aduan </option>
+																<option value="Cadangan"> Cadangan </option>
+												                </select>
 												</div>
-											</div>-->
+											</div>
 											
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Feedback </label>
 		
 												<div class="col-sm-5">
-													<textarea name="remarks" class="form-control" id="form-field-8" placeholder="Enter your feedback."></textarea>
+													<textarea name="Feedback" class="form-control" id="form-field-8" placeholder="Enter your feedback here"></textarea>
 												</div>
 											</div>
 											
