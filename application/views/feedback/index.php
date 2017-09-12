@@ -78,33 +78,35 @@
 											<form class="form-horizontal" role="form" method="post" action="feedback/processdata" enctype="multipart/form-data">
 											<br/>
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> School ID </label>
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Kod Sekolah </label>
 												<div class="col-sm-5">
 													 <input name="schoolName" type="text" class="form-control" placeholder="Taip dan Pilih Nama Sekolah" />
                                                      <input name="schoolID" type="hidden" />
-													
-													
-													
-													
-													
+				
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> School Address </label>
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Alamat Sekolah </label>
 												<div class="col-sm-5">
 													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="Jalan TKS 1" />
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Date </label>
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Nama </label>
 												<div class="col-sm-5">
-													<div class="input-group">
-														<input name="TS" class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd/mm/yyyy" placeholder="dd/mm/yyyy" />
-													
-														<span class="input-group-addon">
-															<i class="fa fa-calendar bigger-110"></i>
-														</span>
-													</div>
+													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Emel </label>
+												<div class="col-sm-5">
+													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> No. Telefon </label>
+												<div class="col-sm-5">
+													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
 												</div>
 											</div>
 											<!--<div class="form-group">
