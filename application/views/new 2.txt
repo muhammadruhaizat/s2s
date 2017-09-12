@@ -1,0 +1,12 @@
+							var schoolLatLng = {lat: <?php echo $each_senarai_sekolah->Latitude;?>, lng: <?php echo $each_senarai_sekolah->Longitude;?>};
+
+						  if(parseFloat("<?php echo $each_senarai_sekolah->Longitude;?>") > 98.994434 && parseFloat("<?php echo $each_senarai_sekolah->Longitude;?>") < 119.692676){
+							  						  var marker = new google.maps.Marker({
+							position: schoolLatLng,
+							map: map,
+							title: "<?php echo $each_senarai_sekolah->NamaSekolah;?>"
+						  });
+						  }else{
+							  //marker.setMap(map);
+							 console.log(google.maps.geometry.poly.containsLocation(new google.maps.LatLng(<?php echo $each_senarai_sekolah->Latitude;?>, <?php echo $each_senarai_sekolah->Longitude;?>), bermudaTriangle));
+						  }
