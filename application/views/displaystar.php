@@ -52,7 +52,7 @@
 					$nofax = $row['NoFax'];
 				}
 
-			$query = $this->db->query("SELECT * FROM `assessment`");
+			$query = $this->db->query("SELECT * FROM `assessment` WHERE IDSchool = '".$KodSekolah."'");
 
 			$row = $query->row();
 
@@ -197,7 +197,40 @@
         							$SRD = $row->SR;
         							$star_rateD = $row->star_rate;
         							$TSD = $row->TS;
-								}								
+								}else{
+        							$NOLD 			= "N/A";
+        							$MTD 			= "N/A";
+        							$SWDSD 			= "N/A";
+        							$SWPSD 			= "N/A";
+        							$curvatureD 	= "N/A";
+        							$QOCD			= "N/A";
+        							$SDD 			= "N/A";
+        							$LWD 			= "N/A";
+        							$DelineationD 	= "N/A";
+        							$GradeD 		= "N/A";
+        							$RCD 			= "N/A";
+        							$SRGD 			= "N/A";
+        							$SMTCD 			= "N/A";
+        							$VPD 			= "N/A";
+        							$SRSD 			= "N/A";
+        							$SZWD 			= "N/A";
+        							$SLD 			= "N/A";
+        							$PCFD 			= "N/A";
+        							$PCQD 			= "N/A";
+        							$ITD 			= "N/A";
+        							$IQD 			= "N/A";
+        							$PFD 			= "N/A";
+        							$EFID 			= "N/A";
+        							$OS85PD 		= "N/A";
+        							$ADSSRSD 		= "N/A";
+        							$APSSRSD 		= "N/A";
+        							$CIRSRSD 		= "N/A";
+        							$CSRSRSD 		= "N/A";
+        							$AV_WalkD 		= "N/A";
+        							$SRD 			= "N/A";
+        							$star_rateD 	= "N/A";
+        							$TSD 			= "N/A";
+								}							
 
 						?>
 

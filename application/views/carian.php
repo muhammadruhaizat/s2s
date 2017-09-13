@@ -8,6 +8,10 @@
 			$( document ).ready(function() {
 				var myTable = $('#dynamic-table').DataTable();
 				
+				$('input[name=txtSearch]').keyup( function() {
+					myTable.search($(this).val()).draw() ;
+				} );
+				
 				$('.selBandarSurat').change( function() {
 					var selBandarSurat = this.value;
 					
@@ -36,6 +40,50 @@
 				$('.selNegeri').change( function() {
 					var selNegeri = this.value;
 					
+					if(selNegeri == "--Sila pilih negeri--"){
+						var datastr = '{"mode":"GetDaerahAll"}';
+						$.ajax({
+							url: "<?php echo base_url();?>main/ajax",
+							type: "POST",
+							data: {"datastr":datastr},
+							success: function(data){
+								$('.selBandarSurat option').remove();
+								$('.selBandarSurat').append('<option>--Sila pilih bandar surat--</option>');
+								
+								var decodedData = JSON.parse(data);
+								
+								var senaraiDaerah = [];												
+								
+								for (var i = 0; i < decodedData.length; i++){
+								  var obj = decodedData[i];
+									$('.selBandarSurat').append('<option>'+obj["BandarSurat"]+'</option>');
+								}
+							}
+						});	
+					}else{
+						var datastr = '{"mode":"GetDaerahByNegeri","Negeri":"'+selNegeri+'"}';
+						$.ajax({
+							url: "<?php echo base_url();?>main/ajax",
+							type: "POST",
+							data: {"datastr":datastr},
+							success: function(data){
+								$('.selBandarSurat option').remove();
+								$('.selBandarSurat').append('<option>--Sila pilih bandar surat--</option>');
+								
+								var decodedData = JSON.parse(data);
+								
+								var senaraiDaerah = [];												
+								
+								for (var i = 0; i < decodedData.length; i++){
+								  var obj = decodedData[i];
+									$('.selBandarSurat').append('<option>'+obj["BandarSurat"]+'</option>');
+								}
+							}
+						});						
+					}
+
+					
+					
 					if($(".selNegeri option:selected").text() != "--Sila pilih negeri--"){
 						myTable
 							.column(5)
@@ -59,6 +107,12 @@
 				});
 			});
 			</script>
+			<style>
+				#dynamic-table_filter
+				{
+					display: none;
+				}
+			</style>
 			<div class="main-content">
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
@@ -83,6 +137,18 @@
 						</div><!-- /.page-header -->
 						<table>
 							<tr>
+								<td>Negeri</td>
+								<td>&nbsp;:</td>
+								<td style="padding:5px;">
+									<select class="selNegeri">
+										<option>--Sila pilih negeri--</option>
+										<?php foreach($senarai_negeri as $eachNegeri):?>
+										<option><?php echo $eachNegeri->Negeri;?></option>
+										<?php endforeach;?>
+									</select>								
+								</td>
+							</tr>
+							<tr>
 								<td>Bandar Surat</td>
 								<td>&nbsp;:</td>
 								<td style="padding:5px;">
@@ -95,22 +161,15 @@
 								</td>
 							</tr>
 							<tr>
-								<td>Negeri</td>
+								<td>Carian Bebas</td>
 								<td>&nbsp;:</td>
 								<td style="padding:5px;">
-									<select class="selNegeri">
-										<option>--Sila pilih negeri--</option>
-										<?php foreach($senarai_negeri as $eachNegeri):?>
-										<option><?php echo $eachNegeri->Negeri;?></option>
-										<?php endforeach;?>
-									</select>								
+									<input type="text" name="txtSearch" placeholder="Masukkan apa-apa karakter" style="width:220px;" />
 								</td>
 							</tr>
 						</table>
 						<br/>
 						<br/>
-						<br/>
-						
 										<div class="table-header">
 											Senarai Sekolah
 										</div>
@@ -123,25 +182,26 @@
 												<thead>
 													<tr>
 														<th class="center">#</th>
-														<th>Kod Sekolah</th>
-														<th>Nama Sekolah</th>
-														<th>Alamat</th>
-														<th>Bandar Surat</th>
-														<th>Negeri</th>
-														<th>Penarafan</th>
+														<th class="center">Kod Sekolah</th>
+														<th class="center">Nama Sekolah</th>
+														<th class="center">Alamat</th>
+														<th class="center">Bandar Surat</th>
+														<th class="center">Negeri</th>
+														<th class="center">Penarafan</th>
 													</tr>
 												</thead>
 
 												<tbody>
 													<?php $i=0; foreach($senarai_sekolah as $eachSekolah): $i++;?>
 													<tr>
-														<td class="center"><?php echo $i;?></td>
-														<td><?php echo $eachSekolah->KodSekolah;?></td>
-														<td><?php echo $eachSekolah->NamaSekolah;?></td>
-														<td><?php echo $eachSekolah->AlamatSurat;?></td>
-														<td><?php echo $eachSekolah->BandarSurat;?></td>
-														<td><?php echo $eachSekolah->Negeri;?></td>
-														<td class="center"><?php if(isset($eachSekolah->star_rate)):?><span><?php if($eachSekolah->star_rate == 1): echo "<img style='width:80px;' src='".base_url()."assets/images/1-star.png'/>"; elseif($eachSekolah->star_rate == 2): echo "<img style='width:80px;' src='".base_url()."assets/images/2-star.png'/>";elseif($eachSekolah->star_rate == 3): echo "<img style='width:80px;' src='".base_url()."assets/images/3-star.png'/>";elseif($eachSekolah->star_rate == 4): echo "<img style='width:80px;' src='".base_url()."assets/images/4-star.png'/>";elseif($eachSekolah->star_rate == 5): echo "<img style='width:80px;' src='".base_url()."assets/images/5-star.png'/>";endif;?></span> (<?php echo $eachSekolah->star_rate;?>/5)<?php else:?><strong>-</strong><?php endif;?></td>
+														<td style="width:5%;" class="center"><?php echo $i;?></td>
+														<td style="width:10%;" class="center"><a target="_blank" href="<?php echo base_url();?>process/processFromCarian/<?php echo $eachSekolah->KodSekolah;?>"><?php echo $eachSekolah->KodSekolah;?><a/></td>
+														<td style="width:25%;"><?php echo $eachSekolah->NamaSekolah;?></td>
+														<td style="width:25%;"><?php echo $eachSekolah->AlamatSurat;?></td>
+														<td style="width:10%;"><?php echo $eachSekolah->BandarSurat;?></td>
+														<td style="width:10%;"><?php echo $eachSekolah->Negeri;?></td>
+														<td style="width:15%;" class="center">
+														<?php if(isset($eachSekolah->star_rate)):?><span><a target="_blank" href="<?php echo base_url();?>process/processFromCarian/<?php echo $eachSekolah->KodSekolah;?>"><img alt="Klik untuk maklumat terperinci" style='width:80px;' src='<?php echo base_url();?>assets/images/<?php if($eachSekolah->star_rate == 1): echo "1-star.png"; elseif($eachSekolah->star_rate == 2): echo "2-star.png";elseif($eachSekolah->star_rate == 3): echo "3-star.png";elseif($eachSekolah->star_rate == 4): echo "4-star.png";elseif($eachSekolah->star_rate == 5): echo "5-star.png";endif;?>'/></a></span> (<?php echo $eachSekolah->star_rate;?>/5)<?php else:?><strong>-</strong><?php endif;?></td>
 													</tr>
 													<?php endforeach;?>
 												</tbody>

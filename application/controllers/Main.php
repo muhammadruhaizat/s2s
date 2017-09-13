@@ -76,6 +76,20 @@ class Main extends CI_Controller {
 				
 				echo json_encode($data['data_sekolah']);
 			break;
+			case "GetDaerahByNegeri":
+				$Negeri = $obj->Negeri;
+				
+				$query = $this->db->query("SELECT BandarSurat FROM senarai_sekolah WHERE Negeri = '$Negeri' GROUP BY BandarSurat");
+				$data['senarai_bandar_surat'] = $query->result();
+				
+				echo json_encode($data['senarai_bandar_surat']);
+			break;
+			case "GetDaerahAll":
+				$query = $this->db->query("SELECT BandarSurat FROM senarai_sekolah GROUP BY BandarSurat");
+				$data['senarai_bandar_surat'] = $query->result();
+				
+				echo json_encode($data['senarai_bandar_surat']);
+			break;
 		}
 	}
 	function POI_info($namaSekolah){

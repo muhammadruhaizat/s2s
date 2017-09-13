@@ -227,6 +227,9 @@ class Process extends CI_Controller {
 		$this->load->view("displaystar",$data);
 
     }
-        
+    function processFromCarian($KodSekolah){
+		$data["KodSekolah"] = $KodSekolah;
+		$this->load->view("displaystar",$data);
+	}
 	//}
 }
