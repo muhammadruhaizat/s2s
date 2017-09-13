@@ -20,28 +20,36 @@
 			.next().on(ace.click_event, function(){
 				$(this).prev().focus();
 			});
-		});
 				
-						var senaraiSekolah = [];
-						
-						<?php $i=0; foreach($senarai_sekolah as $eachSekolah): $i++;?>
-							<?php if($i < 2):?>
-							senaraiSekolah.push({
-								id: "<?php echo $eachSekolah->KodSekolah;?>",
-								label: "<?php echo $eachSekolah->NamaSekolah." ".$eachSekolah->PoskodSurat." ".$eachSekolah->Negeri." [ ID : ".$eachSekolah->KodSekolah." ]";?>"						
-							});
-							<?php endif;?>
-						<?php endforeach;?>
-						
-						$('input[name=schoolName]').autocomplete({
-							source: senaraiSekolah,
-							select: function (event, ui) {
-								alert("test");
-								$("input[name=schoolName]").val(ui.item.label); // display the selected text
-								$("input[name=schoolID]").val(ui.item.id); // save selected id to hidden input
-							}
-						});
+			var senaraiSekolah = [];
+			
+			<?php foreach($senarai_sekolah as $eachSekolah):?>
+				senaraiSekolah.push({
+					id: "<?php echo $eachSekolah->KodSekolah;?>",
+					label: "<?php echo $eachSekolah->NamaSekolah.", ".$eachSekolah->PoskodSurat." ".$eachSekolah->BandarSurat.", ".$eachSekolah->Negeri." [ ID : ".$eachSekolah->KodSekolah." ]";?>",
+					class: "<?php echo $eachSekolah->AlamatSurat.", ".$eachSekolah->PoskodSurat." ".$eachSekolah->BandarSurat.", ".$eachSekolah->Negeri;?>"
+				});
+			<?php endforeach;?>
+			
+			$('input[name=schoolName]').autocomplete({
+				source: senaraiSekolah,
+				select: function (event, ui) {
+					$("input[name=schoolName]").val(ui.item.label); // display the selected text
+					$("input[name=schoolID]").val(ui.item.id); // save selected id to hidden input
+					$("input[name=alamatSekolah]").val(ui.item.class); // save selected id to hidden input
+				}
+			});
+		});
 	</script>
+	<style>
+	.ui-autocomplete {
+		max-height: 300px;
+		overflow-y: auto;
+		/* prevent horizontal scrollbar */
+		overflow-x: hidden;
+		z-index:3;
+	}
+	</style>
 				<div class="main-content-inner">
 					<div class="breadcrumbs ace-save-state" id="breadcrumbs">
 						<ul class="breadcrumb">
@@ -78,56 +86,54 @@
 											<form class="form-horizontal" role="form" method="post" action="feedback/processdata" enctype="multipart/form-data">
 											<br/>
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> School ID </label>
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Kod Sekolah </label>
 												<div class="col-sm-5">
-													 <input name="schoolName" type="text" class="form-control" placeholder="Taip dan Pilih Nama Sekolah" />
+													 <input name="KodSekolah" type="text" class="form-control" placeholder="Taip dan Pilih Nama Sekolah" />
                                                      <input name="schoolID" type="hidden" />
-													
-													
-													
-													
-													
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> School Address </label>
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Alamat Sekolah </label>
 												<div class="col-sm-5">
-													<input name="locationStr" type="text" id="form-field-1" class="col-sm-12" placeholder="Jalan TKS 1" />
+													<input name="AlamatSekolah" type="text" id="form-field-1" class="col-sm-12" placeholder="Jalan TKS 1" />
 												</div>
 											</div>
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Date </label>
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Nama </label>
 												<div class="col-sm-5">
-													<div class="input-group">
-														<input name="TS" class="form-control date-picker" id="id-date-picker-1" type="text" data-date-format="dd/mm/yyyy" placeholder="dd/mm/yyyy" />
-													
-														<span class="input-group-addon">
-															<i class="fa fa-calendar bigger-110"></i>
-														</span>
-													</div>
+													<input name="Nama" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
 												</div>
 											</div>
-											<!--<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Riding Speed (KM/H) </label>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Emel </label>
 												<div class="col-sm-5">
-													<div class="input-group col-sm-12">
-															<select name="ridingSpeed" class="form-control">
-																<option value=""> --Please Select Speed-- </option>
-																<option value="10"> 10 </option>
-																<option value="20"> 20 </option>
-																<option value="30"> 30 </option>
-																<option value="40"> 40 </option>
-																<option value="50"> 50 </option>
-															</select>
-													</div>
+													<input name="Emel" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
 												</div>
-											</div>-->
+											</div>
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> No. Telefon </label>
+												<div class="col-sm-5">
+													<input name="NoTelefon" type="text" id="form-field-1" class="col-sm-12" placeholder="" />
+												</div>
+											</div>
+
+											<div class="form-group">
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Kategori </label>
+		
+												<div class="col-sm-5">
+													<select name="Kategori" class="form-control">
+													             <option value=""> --Please Select-- </option>
+																<option value="Aduan"> Aduan </option>
+																<option value="Cadangan"> Cadangan </option>
+												                </select>
+												</div>
+											</div>
 											
 											<div class="form-group">
 												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Feedback </label>
 		
 												<div class="col-sm-5">
-													<textarea name="remarks" class="form-control" id="form-field-8" placeholder="Enter your feedback."></textarea>
+													<textarea name="Feedback" class="form-control" id="form-field-8" placeholder="Enter your feedback here"></textarea>
 												</div>
 											</div>
 											

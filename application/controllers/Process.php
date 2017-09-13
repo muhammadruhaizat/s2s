@@ -44,30 +44,55 @@ class Process extends CI_Controller {
 		ini_set('MAX_EXECUTION_TIME', -1);
 
 
+            $SchoolID = $this->input->post('schoolID');
+			
             $NOL  = $this->input->post('NOL');
+                $NOL = explode(':', $NOL);
             $MT  = $this->input->post('MT');
+                $MT = explode(':', $MT);
             $SWDS  = $this->input->post('SWDS');
+                $SWDS = explode(':', $SWDS);
             $SWPS  = $this->input->post('SWPS');
+                $SWPS = explode(':', $SWPS);
             $Curvature  = $this->input->post('Curvature');
+                $Curvature = explode(':', $Curvature);
             $QOC  = $this->input->post('QOC');
+                $QOC = explode(':', $QOC);
             $SD  = $this->input->post('SD');
+                $SD = explode(':', $SD);
             $LW  = $this->input->post('LW');
+                $LW = explode(':', $LW);
             $Delineation  = $this->input->post('Delineation');
+                $Delineation = explode(':', $Delineation);
             $Grade  = $this->input->post('Grade');
+                $Grade = explode(':', $Grade);
             $RC  = $this->input->post('RC');
+                $RC = explode(':', $RC);
             $SRG  = $this->input->post('SRG');
+                $SRG = explode(':', $SRG);
             $SMTC  = $this->input->post('SMTC');
+                $SMTC = explode(':', $SMTC);
             $VP  = $this->input->post('VP');
+                $VP = explode(':', $VP);
             $SRS  = $this->input->post('SRS');
+                $SRS = explode(':', $SRS);
             $SZW  = $this->input->post('SZW');
+                $SZW = explode(':', $SZW);
             $SL  = $this->input->post('SL');
+                $SL = explode(':', $SL);
             $PCF  = $this->input->post('PCF');
+                $PCF = explode(':', $PCF);
             $PCQ  = $this->input->post('PCQ');
+                $PCQ = explode(':', $PCQ);
             $IT  = $this->input->post('IT');
+                $IT = explode(':', $IT);
             $IQ  = $this->input->post('IQ');
+                $IQ = explode(':', $IQ);
             $PF  = $this->input->post('PF');
+                $PF = explode(':', $PF);
             $EFI  = $this->input->post('EFI');
             $OS85P  = $this->input->post('OS85P');
+                $OS85P = explode(':', $OS85P);
             $TS  = $this->input->post('TS');
             $SWDSS = '0';
             $SWPSS = '0';
@@ -76,46 +101,30 @@ class Process extends CI_Controller {
 			
 
         
-        //$this->load->helper(array('Process', 'url'));
-
-        //$this->load->library('form_validation');
-
-        //$this->form_validation->set_rules('NOL', 'NOL', 'required');
-
-        //if ($this->form_validation->run() == FALSE)
-            //{
-                //$this->load->view('formsuccess');
-            //}
-                //else
-            //{
-
-
-
-
-            if ($SWDS == '20') {
+            if ($SWDS[1] == '20') {
                 $SWDSS = '90';
-            } else if ($SWDS == '5') {
+            } else if ($SWDS[1] == '5') {
                 $SWDSS = '50';
-            } else if ($SWDS == '6') {
+            } else if ($SWDS[1] == '6') {
                 $SWDSS = '60';
             }
 
-            if ($SWPS == '20') {
+            if ($SWPS[1] == '20') {
                 $SWPSS = '90';
-            } else if ($SWPS == '5') {
+            } else if ($SWPS[1] == '5') {
                 $SWPSS = '50';
-            } else if ($SWPS == '6') {
+            } else if ($SWPS[1] == '6') {
                 $SWPSS = '60';
             }
 
 
-            $ADSSRS = $SWDS * $Curvature * $QOC * $SD * $LW * $Delineation * $Grade * $RC * $SMTC * $VP * $SRS * $SZW * $SL * $SWDSS * $EFI * $OS85P;
+            $ADSSRS = $SWDS[1] * $Curvature[1] * $QOC[1] * $SD[1] * $LW[1] * $Delineation[1] * $Grade[1] * $RC[1] * $SMTC[1] * $VP[1] * $SRS[1] * $SZW[1] * $SL[1] * $SWDSS * $EFI * $OS85P[1];
 
-            $APSSRS = $SWPS * $Curvature * $QOC * $SD * $LW * $Delineation * $Grade * $RC * $SMTC * $VP * $SRS * $SZW * $SL * $SWPSS * $EFI * $OS85P;
+            $APSSRS = $SWPS[1] * $Curvature[1] * $QOC[1] * $SD[1] * $LW[1] * $Delineation[1] * $Grade[1] * $RC[1] * $SMTC[1] * $VP[1] * $SRS[1] * $SZW[1] * $SL[1] * $SWPSS * $EFI * $OS85P[1];
 
-            $CIRSRS = $NOL * $MT * $PCF * $PCQ * $IT * $IQ * $PF * $SRG * $SL * $SD * $VP * $SZW * $SMTC * '90' * $EFI * $OS85P;
+            $CIRSRS = $NOL[1] * $MT[1] * $PCF[1] * $PCQ[1] * $IT[1] * $IQ[1] * $PF[1] * $SRG[1] * $SL[1] * $SD[1] * $VP[1] * $SZW[1] * $SMTC[1] * '90' * $EFI * $OS85P[1];
 
-            $CSRSRS = $NOL * $MT * $PCF * $PCQ * $IT * $IQ * $PF * $SRG * $SL * $SD * $VP * $SZW * $SMTC * '90' * $EFI * $OS85P;
+            $CSRSRS = $NOL[1] * $MT[1] * $PCF[1] * $PCQ[1] * $IT[1] * $IQ[1] * $PF[1] * $SRG[1] * $SL[1] * $SD[1] * $VP[1] * $SZW[1] * $SMTC[1] * '90' * $EFI * $OS85P[1];
 
             $AV_Walk = ($ADSSRS + $APSSRS) * '0.5';
 
@@ -133,32 +142,32 @@ class Process extends CI_Controller {
                 $star_rate = '5';
             }
 				
-        ////Prepare upload data
+        ////Prepare upload data - value
         $upload_data = Array(
-            'NOL' => $NOL,
-            'MT' => $MT,
-            'SWDS' => $SWDS,
-            'SWPS' => $SWPS,
-            'Curvature' => $Curvature,
-            'QOC' => $QOC,
-            'SD' => $SD,
-            'LW' => $LW,
-            'Delineation' => $Delineation,
-            'Grade' => $Grade,
-            'RC' => $RC,
-            'SRG' => $SRG,
-            'SMTC' => $SMTC,
-            'VP' => $VP,
-            'SRS' => $SRS,
-            'SZW' => $SZW,
-            'SL' => $SL,
-            'PCF' => $PCF,
-            'PCQ' => $PCQ,
-            'IT' => $IT,
-            'IQ' => $IQ,
-            'PF' => $PF,
+            'NOL' => $NOL[1],
+            'MT' => $MT[1],
+            'SWDS' => $SWDS[1],
+            'SWPS' => $SWPS[1],
+            'Curvature' => $Curvature[1],
+            'QOC' => $QOC[1],
+            'SD' => $SD[1],
+            'LW' => $LW[1],
+            'Delineation' => $Delineation[1],
+            'Grade' => $Grade[1],
+            'RC' => $RC[1],
+            'SRG' => $SRG[1],
+            'SMTC' => $SMTC[1],
+            'VP' => $VP[1],
+            'SRS' => $SRS[1],
+            'SZW' => $SZW[1],
+            'SL' => $SL[1],
+            'PCF' => $PCF[1],
+            'PCQ' => $PCQ[1],
+            'IT' => $IT[1],
+            'IQ' => $IQ[1],
+            'PF' => $PF[1],
             'EFI' => $EFI,
-            'OS85P' => $OS85P,
+            'OS85P' => $OS85P[1],
             'TS' => $TS,
             'ADSSRS' => $ADSSRS,
             'APSSRS' => $APSSRS,
@@ -167,16 +176,55 @@ class Process extends CI_Controller {
             'AV_Walk' => $AV_Walk,
             'SR' => $SR,
             'star_rate' => $star_rate,
-
+            'IDSchool' => $SchoolID
         );
-        ////Insert into tbl_uploads
+        ////Insert into assessment table for values
         $this->db->insert('assessment', $upload_data);
 
-        $_COOKIE['star'] = $star_rate;
 
+        ////Prepare upload data - text
+        $upload_data_text = Array(
+            'NOL' => $NOL[0],
+            'MT' => $MT[0],
+            'SWDS' => $SWDS[0],
+            'SWPS' => $SWPS[0],
+            'Curvature' => $Curvature[0],
+            'QOC' => $QOC[0],
+            'SD' => $SD[0],
+            'LW' => $LW[0],
+            'Delineation' => $Delineation[0],
+            'Grade' => $Grade[0],
+            'RC' => $RC[0],
+            'SRG' => $SRG[0],
+            'SMTC' => $SMTC[0],
+            'VP' => $VP[0],
+            'SRS' => $SRS[0],
+            'SZW' => $SZW[0],
+            'SL' => $SL[0],
+            'PCF' => $PCF[0],
+            'PCQ' => $PCQ[0],
+            'IT' => $IT[0],
+            'IQ' => $IQ[0],
+            'PF' => $PF[0],
+            'EFI' => $EFI,
+            'OS85P' => $OS85P[0],
+            'TS' => $TS,
+            'ADSSRS' => $ADSSRS,
+            'APSSRS' => $APSSRS,
+            'CIRSRS' => $CIRSRS,
+            'CSRSRS' => $CSRSRS,
+            'AV_Walk' => $AV_Walk,
+            'SR' => $SR,
+            'star_rate' => $star_rate,
+            'IDSchool' => $SchoolID
+        );
+        ////Insert into assessment table for text
+        $this->db->insert('assessment_text', $upload_data_text);
+
+		$data["KodSekolah"] = $SchoolID;
         //Alert success redirect to ?success
 		//redirect("main");
-		$this->load->view("displaystar");
+		$this->load->view("displaystar",$data);
 
     }
         

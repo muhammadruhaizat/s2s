@@ -1,7 +1,8 @@
 <?php
+header("Access-Control-Allow-Origin: *");
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Main extends CI_Controller {
+class Carian extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -25,10 +26,17 @@ class Main extends CI_Controller {
     }
 	public function index()
 	{
-		ini_set('memory_limit', '-1');
-		$query = $this->db->query('SELECT * FROM senarai_sekolah LEFT JOIN assessment ON senarai_sekolah.KodSekolah = assessment.IDSchool WHERE senarai_sekolah.Latitude != "0"');
+		$query = $this->db->query('SELECT * FROM senarai_sekolah LEFT JOIN assessment ON senarai_sekolah.KodSekolah = assessment.IDSchool');
 		$data['senarai_sekolah'] = $query->result();
-		$this->load->view('main',$data);
+		
+		
+		$query = $this->db->query('SELECT BandarSurat FROM senarai_sekolah GROUP BY BandarSurat');
+		$data['senarai_bandar_surat'] = $query->result();
+		
+		$query = $this->db->query('SELECT Negeri FROM senarai_sekolah GROUP BY Negeri');
+		$data['senarai_negeri'] = $query->result();
+		
+		$this->load->view('carian',$data);
 	}
 	
 	public function ajax(){
@@ -55,26 +63,10 @@ class Main extends CI_Controller {
 				
 				$query = $this->db->query("SELECT * FROM user WHERE username = '$Username' AND katalaluan = '$Password'");
 				if($query->num_rows() > 0){
-					echo $query->row()->tahap."|".$query->row()->username."|".$query->row()->daerah;
+					echo $query->row()->tahap;
 				}else{
 					echo "Gagal";
 				}
-			break;
-			case "GetSchoolByDaerah":
-				$Daerah = $obj->Daerah;
-				
-				$query = $this->db->query("SELECT * FROM senarai_sekolah WHERE BandarSurat = '$Daerah'");
-				$data['senarai_sekolah'] = $query->result();
-				
-				echo json_encode($data['senarai_sekolah']);
-			break;
-			case "GetSchoolByKodSekolah":
-				$KodSekolah = $obj->KodSekolah;
-				
-				$query = $this->db->query("SELECT * FROM senarai_sekolah WHERE KodSekolah = '$KodSekolah'");
-				$data['data_sekolah'] = $query->row();
-				
-				echo json_encode($data['data_sekolah']);
 			break;
 		}
 	}

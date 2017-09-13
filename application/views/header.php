@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
-		<link rel="shortcut icon" href="<?php echo base_url();?>assets/rocom_logo.ico">
+		<link rel="shortcut icon" href="<?php echo base_url();?>assets/images/roshack_eye.gif">
 			<!-- bootstrap & fontawesome -->
 		<link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="<?php echo base_url();?>assets/font-awesome/4.5.0/css/font-awesome.min.css" />
@@ -39,6 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<script src="<?php echo base_url();?>assets/js/ace-elements.min.js"></script>
 		<script src="<?php echo base_url();?>assets/js/ace.min.js"></script>
 		<script src="<?php echo base_url();?>assets/js/moment.min.js"></script>
+		<script src="<?php echo base_url();?>assets/js/bootbox.js"></script>
 		<script src="<?php echo base_url();?>assets/js/bootstrap-datepicker.min.js"></script>
 		<script src="<?php echo base_url();?>assets/js/bootstrap-datetimepicker.min.js"></script>
 		
@@ -53,22 +54,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<div class="navbar-header pull-left">
 				  <table width="106" border="0" align="center">
 				    <tr>
-				      <td width="96"><a href="<?php echo base_url();?>" class="navbar-brand"><img src="<?php echo base_url();?>/assets/images/roshack.gif" style="width:100px;" align="absmiddle"/></a></td>
+				      <td width="96"><a href="<?php echo base_url();?>" class="navbar-brand"><img src="<?php echo base_url();?>/assets/images/roshack.gif" style="width:150px;" align="absmiddle"/></a></td>
 			        </tr>
 			      </table>
 				</div>
 
-				<div class="navbar-buttons navbar-header pull-left">
-				  <table width=100% border="0" align="center">
+				<div class="navbar-buttons navbar-header pull-left" style="height:96px;">
+				  <table width=100% border="0" align="center" style="height:100%;">
 				    <tr>
-				      <td align="left" valign="middle"><p>&nbsp;</p>
+				      <td align="left" valign="middle">
 				        <ul class="nav ace-nav">
-				        <li class="purple"><a href="<?php echo base_url();?>dashboard"><span class="badge badge-grey">Dashboard</span> </a> </li>
-				        <li class="lightblue"> <a href="<?php echo base_url();?>schoolist"> <i class="ace-icon fa fa-tasks"></i> <span class="badge badge-grey">School List</span> </a> </li>
-				        <li class="red"> <a href="<?php echo base_url();?>datainput"> <i class="ace-icon fa fa-exchange"></i> <span class="badge badge-grey">Data Input</span> </a> </li>
-				        <li class="lightblue"> <a href="<?php echo base_url();?>analysis"> <i class="ace-icon fa fa-globe"></i> <span class="badge badge-grey">Analysis</span> </a> </li>
-				        <li class="red"> <a href="<?php echo base_url();?>query"> <i class="ace-icon fa fa-globe"></i> <span class="badge badge-grey">Query</span> </a> </li>
-				        <li class="purple"> <a href="<?php echo base_url();?>feedback"> <i class="ace-icon fa fa-comments"></i> <span class="badge badge-grey">Feedback</span> </a></li>
+				        <li class="purple"><a href="<?php echo base_url();?>dashboard"><br/><i class="ace-icon fa fa-home" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Utama</span> </a> </li>
+				        <li class="purple"><a href="<?php echo base_url();?>main"><br/><i class="ace-icon fa fa-globe" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Peta</span> </a> </li>
+				        <li class="lightblue"> <a href="<?php echo base_url();?>schoolist"><br/><i class="ace-icon fa fa-tasks" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Senarai</span> </a> </li>
+				        <li class="red"> <a href="<?php echo base_url();?>datainput"><br/><i class="ace-icon fa fa-exchange" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Input Data</span> </a> </li>
+				        <li class="lightblue"> <a href="<?php echo base_url();?>analysis"><br/><i class="ace-icon fa fa-bar-chart" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Analisa</span> </a> </li>
+				        <li class="red"> <a href="<?php echo base_url();?>carian"><br/><i class="ace-icon fa fa-search" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Carian</span> </a> </li>
+				        <li class="purple"> <a href="<?php echo base_url();?>feedback"><br/><i class="ace-icon fa fa-comments" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Maklum Balas</span> </a></li>
 				        </ul></td>
 			        </tr>
 			      </table>

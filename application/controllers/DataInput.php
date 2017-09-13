@@ -22,8 +22,11 @@ class DataInput extends CI_Controller {
     }
 	public function index()
 	{
+		$query = $this->db->query('SELECT * FROM senarai_sekolah');
+		$data['senarai_sekolah'] = $query->result();
+		
 		$this->load->view("header");
-		$this->load->view('datainput/index');
+		$this->load->view('datainput/index',$data);
 		$this->load->view("footer");
 	}
 }

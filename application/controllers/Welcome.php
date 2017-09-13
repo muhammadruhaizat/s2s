@@ -20,6 +20,15 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		//$query = $this->db->query("SELECT * FROM senarai_sekolah GROUP BY BandarSurat;");
+		//
+		//$i = 1;
+		//foreach($query->result() as $EachDaerah){
+		//	$unamerun = sprintf("%05d",$i);
+		//	$inQuery = $this->db->query("INSERT INTO user (username,katalaluan,tahap,daerah) VALUES('ND$unamerun','ndpwd',1,'$EachDaerah->BandarSurat')");
+		//	$i++;
+		//}
+		
 		$this->load->view('welcome_message');
 	}
 }
