@@ -34,6 +34,13 @@ class Process extends CI_Controller {
 	
 	function processdata()
 	{
+		
+		
+		
+		
+		
+		
+		
 		ini_set('MAX_EXECUTION_TIME', -1);
 
 
@@ -64,6 +71,9 @@ class Process extends CI_Controller {
             $TS  = $this->input->post('TS');
             $SWDSS = '0';
             $SWPSS = '0';
+			
+			
+			
 
         
         //$this->load->helper(array('Process', 'url'));
