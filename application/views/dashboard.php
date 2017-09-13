@@ -20,8 +20,8 @@
 			]);
 
 			var options = {'title':'Penarafan Sekolah (Maklumat)',
-						   'width':800,
-						   'height':600,
+						   'width':600,
+						   'height':500,
 							is3D: true,
 							sliceVisibilityThreshold: 0};
 
@@ -44,8 +44,8 @@
 			]);
 
 			var options = {'title':'Penarafan Sekolah (Bintang)',
-						   'width':800,
-						   'height':600,
+						   'width':600,
+						   'height':500,
 							is3D: true,
 							sliceVisibilityThreshold: 0};
 
@@ -65,8 +65,8 @@
 			]);
 
 			var options = {'title':'Pecahan Sekolah Mengikut Negeri',
-						   'width':800,
-						   'height':600,
+						   'width':600,
+						   'height':500,
 							is3D: true,
 							sliceVisibilityThreshold: 0};
 
@@ -86,8 +86,8 @@
 			]);
 
 			var options = {'title':'Pecahan Sekolah Mengikut Peringkat Sekolah',
-						   'width':800,
-						   'height':600,
+						   'width':600,
+						   'height':500,
 							is3D: true,
 							sliceVisibilityThreshold: 0};
 

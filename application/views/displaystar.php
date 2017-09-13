@@ -60,7 +60,9 @@
 					{
         				$star_value = $row->star_rate;
 					}
-
+				else{
+        				$star_value = 0;
+				}
 		?>
 	<div id="mapDashboard" style="text-align:center;">
 		<header>
@@ -83,6 +85,9 @@
 				<?php
 			} else if ($star_value == '1') { ?>
 				<img src="<?php echo base_url();?>/assets/images/1-star.jpeg" style="width:500px;"/>
+				<?php
+			} else if ($star_value == '0') { ?>
+				<img src="<?php echo base_url();?>/assets/images/0-star.jpeg" style="width:500px;"/>
 				<?php
 			}
 			?>
@@ -420,6 +425,8 @@
         									$message = 'Suggested list of items for improvements';
         								}
 
+								}else{
+        									$message = 'N/A';
 								}
 
 								$max = count($improve); ?>

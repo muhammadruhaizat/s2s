@@ -6,7 +6,18 @@
 
 			<script type="text/javascript">
 			$( document ).ready(function() {
-				var myTable = $('#dynamic-table').DataTable();
+				var myTable = $('#dynamic-table').DataTable(
+				{"oLanguage": {
+					"sLengthMenu": "Papar _MENU_ rekod",
+					"sInfo": "Papar _START_ hingga _END_ dari _TOTAL_ data",
+					"oPaginate": {
+						"sFirst": "Pertama",
+						"sLast": "Terakhir",
+						"sNext": "Seterusnya",
+						"sPrevious": "Sebelumnya"
+					},
+					"sInfoFiltered": "(tapis dari _MAX_ data)"
+				}});
 				
 				$('input[name=txtSearch]').keyup( function() {
 					myTable.search($(this).val()).draw() ;

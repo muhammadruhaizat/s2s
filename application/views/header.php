@@ -66,9 +66,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				        <ul class="nav ace-nav">
 				        <li class="purple"><a href="<?php echo base_url();?>dashboard"><br/><i class="ace-icon fa fa-home" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Utama</span> </a> </li>
 				        <li class="purple"><a href="<?php echo base_url();?>main"><br/><i class="ace-icon fa fa-globe" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Peta</span> </a> </li>
-				        <li class="lightblue"> <a href="<?php echo base_url();?>schoolist"><br/><i class="ace-icon fa fa-tasks" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Senarai</span> </a> </li>
+				        <!--<li class="lightblue"> <a href="<?php echo base_url();?>schoolist"><br/><i class="ace-icon fa fa-tasks" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Senarai</span> </a> </li>-->
 				        <li class="red"> <a href="<?php echo base_url();?>datainput"><br/><i class="ace-icon fa fa-exchange" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Input Data</span> </a> </li>
-				        <li class="lightblue"> <a href="<?php echo base_url();?>analysis"><br/><i class="ace-icon fa fa-bar-chart" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Analisa</span> </a> </li>
+				        <!--<li class="lightblue"> <a href="<?php echo base_url();?>analysis"><br/><i class="ace-icon fa fa-bar-chart" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Analisa</span> </a> </li>-->
 				        <li class="red"> <a href="<?php echo base_url();?>carian"><br/><i class="ace-icon fa fa-search" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Carian</span> </a> </li>
 				        <li class="purple"> <a href="<?php echo base_url();?>feedback"><br/><i class="ace-icon fa fa-comments" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Maklum Balas</span> </a></li>
 				        </ul></td>

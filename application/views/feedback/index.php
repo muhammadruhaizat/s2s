@@ -55,9 +55,9 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="<?php echo base_url();?>">Home</a>
+								<a href="<?php echo base_url();?>">Utama</a>
 							</li>
-							<li class="active">Process Data</li>
+							<li class="active">Maklum Balas</li>
 						</ul><!-- /.breadcrumb -->
 					</div>
 					
@@ -66,10 +66,10 @@
 					<div class="page-content">
 						<div class="page-header">
 							<h1>
-								Feedback
+								Maklum Balas
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-									Submit
+									Hantar
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -79,7 +79,7 @@
 								<!-- PAGE CONTENT BEGINS -->
 								<div class="widget-box">
 									<div class="widget-header">
-										<h4 class="widget-title">Enter Feedback</h4>
+										<h4 class="widget-title">Isi Maklum Balas</h4>
 									</div>
 									<div class="widget-body">
 										<div class="widget-main no-padding">
@@ -130,7 +130,7 @@
 											</div>
 											
 											<div class="form-group">
-												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Feedback </label>
+												<label class="col-sm-3 control-label no-padding-center" for="form-field-1"> Maklum Balas </label>
 		
 												<div class="col-sm-5">
 													<textarea name="Feedback" class="form-control" id="form-field-8" placeholder="Enter your feedback here"></textarea>
@@ -139,7 +139,7 @@
 											
 											<div class="form-actions center">
 												<button type="submit" class="btn btn-sm btn-success">
-													Submit
+													Hantar
 													<i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
 												</button>
 											</div>

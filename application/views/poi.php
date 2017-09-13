@@ -5,7 +5,7 @@
 	</tr>
 	<tr>
 		<td>Kod Sekolah</td>
-		<td style="padding-left: 10px"><strong><?php echo $InfoSekolah->KodSekolah; ?></strong></td>
+		<td style="padding-left: 10px"><strong><a target="_blank" href="<?php echo base_url();?>process/processFromCarian/<?php echo $InfoSekolah->KodSekolah;?>"><?php echo $InfoSekolah->KodSekolah;?><a/></strong></td>
 	</tr>
 	<tr>
 		<td>Nama Sekolah</td>

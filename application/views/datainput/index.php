@@ -98,8 +98,8 @@
 							}
 						});	
 					}else{
-						$(".widget-body").show();
-						$(".alert-danger").hide();
+						$(".widget-body").hide();
+						$(".alert-danger").show();
 					}
 			});			
 		}
@@ -169,9 +169,9 @@ function MM_swapImage() { //v3.0
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="<?php echo base_url();?>">Home</a>
+								<a href="<?php echo base_url();?>">Utama</a>
 							</li>
-							<li class="active">Process Data</li>
+							<li class="active">Input Data</li>
 						</ul><!-- /.breadcrumb -->
 					</div>
 					
@@ -180,10 +180,10 @@ function MM_swapImage() { //v3.0
 					<div class="page-content">
 						<div class="page-header">
 							<h1>
-								Data Input
+								Input Data
 								<small>
 									<i class="ace-icon fa fa-angle-double-right"></i>
-									upload &amp; process
+									isi &amp; proses
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
@@ -193,7 +193,7 @@ function MM_swapImage() { //v3.0
 								<!-- PAGE CONTENT BEGINS -->
 								<div class="widget-box">
 									<div class="widget-header">
-										<h4 class="widget-title">Assessment</h4>
+										<h4 class="widget-title">Penilaian</h4>
 									</div>
 									<div class="alert alert-danger" style="display:none;">
 										<strong>
