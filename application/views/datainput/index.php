@@ -771,8 +771,20 @@ function MM_swapImage() { //v3.0
 												<div class="col-sm-5">
 												  <table width="252" border="0">
 												      <tr>
-												        <td width="331"><input name="EFI" type="text" id="form-field-1" class="col-sm-12" placeholder="Number of lanes and AADT" /></td>
-												        <td width="7">&nbsp;</td>
+												        <td width="330"><select name="EFI" class="form-control">
+													             <option value=""> --Please Select-- </option>
+																<option value="0 to 2,000 AADT:0.015"> 0 to 2,000 AADT </option>
+																<option value="2,000 to 4,000 AADT:0.03"> 2,000 to 4,000 AADT </option>
+																<option value="4,000 to 6,000 AADT:0.042"> 4,000 to 6,000 AADT </option>
+																<option value="6,000 to 8,000 AADT:0.052"> 6,000 to 8,000 AADT </option>
+																<option value="8,000 to 10,000 AADT:0.062"> 8,000 to 10,000 AADT </option>
+																<option value="10,000 to 12,000 AADT:0.07"> 10,000 to 12,000 AADT </option>
+																<option value="12,000 to 14,000 AADT:0.078"> 12,000 to 14,000 AADT </option>
+																<option value="14,000 to 16,000 AADT:0.086"> 14,000 to 16,000 AADT </option>
+																<option value="16,000 to 18,000 AADT:0.093"> 16,000 to 18,000 AADT </option>
+																<option value=">18,000 AADT:0.1"> >18,000 AADT </option>
+												                </select></td>
+													            <td width="8">&nbsp;</td>
 																
 											        </tr>
 											      </table>

@@ -85,11 +85,13 @@ class Process extends CI_Controller {
             $PF  = $this->input->post('PF');
                 $PF = explode(':', $PF);
             $EFI  = $this->input->post('EFI');
+                $EFI = explode(':', $EFI);
             $OS85P  = $this->input->post('OS85P');
                 $OS85P = explode(':', $OS85P);
             $TS  = $this->input->post('TS');
             $SWDSS = '0';
             $SWPSS = '0';
+
 
             if(empty($NOL[1])|| empty($MT[1])||empty($SWDS[1])|| empty($SWPS[1])|| empty($Curvature[1])||empty($QOC[1])|| empty($SD[1]) || empty($LW[1]) || empty($Delineation[1]) || empty($Grade[1]) || empty($RC[1]) || empty($SRG[1]) || empty($SMTC[1]) || empty($VP[1]) || empty($SRS[1]) || empty($SZW[1]) || empty($SL[1]) || empty($PCF[1]) || empty($PCQ[1]) || empty($IT[1]) || empty($IQ[1])  || empty($PF[1]) || empty($EFI) || empty($OS85P[1]) || empty($TS)){
                 ?>
@@ -118,13 +120,13 @@ class Process extends CI_Controller {
             }
 
 
-            $ADSSRS = $SWDS[1] * $Curvature[1] * $QOC[1] * $SD[1] * $LW[1] * $Delineation[1] * $Grade[1] * $RC[1] * $SMTC[1] * $VP[1] * $SRS[1] * $SZW[1] * $SL[1] * $SWDSS * $EFI * $OS85P[1];
+            $ADSSRS = $SWDS[1] * $Curvature[1] * $QOC[1] * $SD[1] * $LW[1] * $Delineation[1] * $Grade[1] * $RC[1] * $SMTC[1] * $VP[1] * $SRS[1] * $SZW[1] * $SL[1] * $SWDSS * $EFI[1] * $OS85P[1];
 
-            $APSSRS = $SWPS[1] * $Curvature[1] * $QOC[1] * $SD[1] * $LW[1] * $Delineation[1] * $Grade[1] * $RC[1] * $SMTC[1] * $VP[1] * $SRS[1] * $SZW[1] * $SL[1] * $SWPSS * $EFI * $OS85P[1];
+            $APSSRS = $SWPS[1] * $Curvature[1] * $QOC[1] * $SD[1] * $LW[1] * $Delineation[1] * $Grade[1] * $RC[1] * $SMTC[1] * $VP[1] * $SRS[1] * $SZW[1] * $SL[1] * $SWPSS * $EFI[1] * $OS85P[1];
 
-            $CIRSRS = $NOL[1] * $MT[1] * $PCF[1] * $PCQ[1] * $IT[1] * $IQ[1] * $PF[1] * $SRG[1] * $SL[1] * $SD[1] * $VP[1] * $SZW[1] * $SMTC[1] * '90' * $EFI * $OS85P[1];
+            $CIRSRS = $NOL[1] * $MT[1] * $PCF[1] * $PCQ[1] * $IT[1] * $IQ[1] * $PF[1] * $SRG[1] * $SL[1] * $SD[1] * $VP[1] * $SZW[1] * $SMTC[1] * '90' * $EFI[1] * $OS85P[1];
 
-            $CSRSRS = $NOL[1] * $MT[1] * $PCF[1] * $PCQ[1] * $IT[1] * $IQ[1] * $PF[1] * $SRG[1] * $SL[1] * $SD[1] * $VP[1] * $SZW[1] * $SMTC[1] * '90' * $EFI * $OS85P[1];
+            $CSRSRS = $NOL[1] * $MT[1] * $PCF[1] * $PCQ[1] * $IT[1] * $IQ[1] * $PF[1] * $SRG[1] * $SL[1] * $SD[1] * $VP[1] * $SZW[1] * $SMTC[1] * '90' * $EFI[1] * $OS85P[1];
 
             $AV_Walk = ($ADSSRS + $APSSRS) * '0.5';
 
@@ -166,7 +168,7 @@ class Process extends CI_Controller {
             'IT' => $IT[1],
             'IQ' => $IQ[1],
             'PF' => $PF[1],
-            'EFI' => $EFI,
+            'EFI' => $EFI[1],
             'OS85P' => $OS85P[1],
             'TS' => $TS,
             'ADSSRS' => $ADSSRS,
@@ -206,7 +208,7 @@ class Process extends CI_Controller {
             'IT' => $IT[0],
             'IQ' => $IQ[0],
             'PF' => $PF[0],
-            'EFI' => $EFI,
+            'EFI' => $EFI[0],
             'OS85P' => $OS85P[0],
             'TS' => $TS,
             'ADSSRS' => $ADSSRS,
