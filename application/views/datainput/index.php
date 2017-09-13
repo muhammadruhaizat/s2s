@@ -49,7 +49,7 @@
 									var tahapP = data.split("|")[0];
 									var daerahP = data.split("|")[2];
 									$("input[name=IDPengguna]").val(idP);
-									alert(daerahP);
+									//alert(daerahP);
 									if(tahapP == "1"){
 										var datastr = '{"mode":"GetSchoolByDaerah","Daerah":"'+daerahP+'"}';
 										$.ajax({

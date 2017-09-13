@@ -35,12 +35,6 @@ class Process extends CI_Controller {
 	function processdata()
 	{
 		
-		
-		
-		
-		
-		
-		
 		ini_set('MAX_EXECUTION_TIME', -1);
 
 
@@ -96,9 +90,15 @@ class Process extends CI_Controller {
             $TS  = $this->input->post('TS');
             $SWDSS = '0';
             $SWPSS = '0';
-			
-			
-			
+
+            if(empty($NOL[1])|| empty($MT[1])||empty($SWDS[1])|| empty($SWPS[1])|| empty($Curvature[1])||empty($QOC[1])|| empty($SD[1]) || empty($LW[1]) || empty($Delineation[1]) || empty($Grade[1]) || empty($RC[1]) || empty($SRG[1]) || empty($SMTC[1]) || empty($VP[1]) || empty($SRS[1]) || empty($SZW[1]) || empty($SL[1]) || empty($PCF[1]) || empty($PCQ[1]) || empty($IT[1]) || empty($IQ[1]))  || empty($PF[1]) || empty($EFI) || empty($OS85P[1]) || empty($TS){
+                ?>
+                    <script>
+                        alert("Please fill all the required fields!");
+                        window:location="/s2s/datainput";
+                    </script>
+                <?php
+            } else {
 
         
             if ($SWDS[1] == '20') {
@@ -225,6 +225,8 @@ class Process extends CI_Controller {
         //Alert success redirect to ?success
 		//redirect("main");
 		$this->load->view("displaystar",$data);
+
+    }
 
     }
         
