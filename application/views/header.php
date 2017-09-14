@@ -70,6 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				        <li class="red"> <a href="<?php echo base_url();?>datainput"><br/><i class="ace-icon fa fa-exchange" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Input Data</span> </a> </li>
 				        <!--<li class="lightblue"> <a href="<?php echo base_url();?>analysis"><br/><i class="ace-icon fa fa-bar-chart" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Analisa</span> </a> </li>-->
 				        <li class="red"> <a href="<?php echo base_url();?>carian"><br/><i class="ace-icon fa fa-search" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Carian</span> </a> </li>
+				        <li class="red"> <a href="<?php echo base_url();?>carianbas"><br/><i class="ace-icon fa fa-bus" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Carian Bas</span> </a> </li>
 				        <li class="purple"> <a href="<?php echo base_url();?>feedback"><br/><i class="ace-icon fa fa-comments" style="font-size:2.5em !important;"></i><br/><span class="badge badge-grey">Maklum Balas</span> </a></li>
 				        </ul></td>
 			        </tr>

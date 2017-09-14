@@ -19,5 +19,9 @@
 		<td>Negeri</td>
 		<td style="padding-left: 10px"><strong><?php echo $InfoSekolah->Negeri; ?></strong>
 	</tr>
+	<tr>
+		<td>Pengendali Bas Daerah</td>
+		<td style="padding-left: 10px"><strong><a href="<?php echo base_url();?>carianbas/caridaerah/<?php echo $InfoSekolah->BandarSurat; ?>"><?php echo $InfoSekolah->BCount; ?></a></strong>
+	</tr>
 </table>
 

@@ -90,10 +90,24 @@ class Main extends CI_Controller {
 				
 				echo json_encode($data['senarai_bandar_surat']);
 			break;
+			case "BasGetDaerahByNegeri":
+				$Negeri = $obj->Negeri;
+				
+				$query = $this->db->query("SELECT daerah FROM pengendali_bas WHERE negeri = '$Negeri' GROUP BY daerah");
+				$data['senarai_bandar_surat'] = $query->result();
+				
+				echo json_encode($data['senarai_bandar_surat']);
+			break;
+			case "BasGetDaerahAll":
+				$query = $this->db->query("SELECT daerah FROM pengendali_bas GROUP BY daerah");
+				$data['senarai_bandar_surat'] = $query->result();
+				
+				echo json_encode($data['senarai_bandar_surat']);
+			break;
 		}
 	}
 	function POI_info($namaSekolah){
-		$query = $this->db->query("SELECT *,COUNT(assessment.IDSchool) AS ACount FROM senarai_sekolah LEFT JOIN assessment ON senarai_sekolah.KodSekolah = assessment.IDSchool WHERE senarai_sekolah.NamaSekolah = ?", array(rawurldecode($namaSekolah)));
+		$query = $this->db->query("SELECT *,COUNT(assessment.IDSchool) AS ACount,(SELECT COUNT(ID) FROM pengendali_bas WHERE daerah = senarai_sekolah.BandarSurat) AS BCount FROM senarai_sekolah LEFT JOIN assessment ON senarai_sekolah.KodSekolah = assessment.IDSchool WHERE senarai_sekolah.NamaSekolah = ?", array(rawurldecode($namaSekolah)));
 		$case = $query->row();
 		$data['InfoSekolah'] = $case;
 

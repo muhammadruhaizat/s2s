@@ -40,7 +40,7 @@
 			  ['3 Bintang', <?php echo $total_senarai_sekolah_3star->val;?>],
 			  ['4 Bintang', <?php echo $total_senarai_sekolah_4star->val;?>],
 			  ['5 Bintang', <?php echo $total_senarai_sekolah_5star->val;?>],
-			  ['Tiada', <?php echo $total_senarai_sekolah_nostar->val;?>]
+			  ['Tiada Penarafan', <?php echo $total_senarai_sekolah_nostar->val;?>]
 			]);
 
 			var options = {'title':'Penarafan Sekolah (Bintang)',
